@@ -1,0 +1,24 @@
+#prim: 42, nvertex: 4
+Node1: -0.015	-0.000125	-0.015
+Node2: 0.015	-0.000125	-0.015
+Node3: 0.015	-0.000125	0.015
+Node4: -0.015	-0.000125	0.015
+PrimOrigin: 0	-0.000125	0
+Primitive lengths: 0.03	0.03
+Norm: -0	1	0
+#volref1: 7, volref2: 8
+#NbSegX: 10, NbSegZ: 10
+#ParentObj: 1	EType: 4
+#SurfX	SurfY	SurfZ	SurfLZ	SurfLZ
+0	-0.000125	0	0.03	0.03
+#DirnCosn: 
+1, 0, 0
+-0, 1, 0
+0, -0, 1
+#SurfLambda: 0.818182	SurfV: 0
+Using the input, the aspect ratio of the elements on prim: 42
+NbSegX: 10, SurfElLX: 0.003, NbSegZ: 10, SurfElLZ: 0.003, AR: 1
+After analyzing the aspect ratio of the elements
+NbSegX: 10, SurfElLX: 0.003, NbSegZ: 10, SurfElLZ: 0.003, AR: 1
+Element begin: 1461, Element end: 1560
+Number of elements on primitive: 100
