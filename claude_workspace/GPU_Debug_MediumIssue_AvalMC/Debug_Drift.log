@@ -1,0 +1,88 @@
+   Prepared weighting field for readout group "TopResistiveGlass".
+Sensor::AddElectrode:
+    Added readout electrode "BottomReadout".
+    All signals are reset.
+Sensor::SetTimeWindow: Resetting all signals.
+ComponentNeBem3d::MagneticField: Field at (8.81746e-06, 0.0978057, 3.73007e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (0.000009, 0.097806, 0.000004).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-4.18868e-07, 0.0949152, -1.37614e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (-0.000000, 0.094915, -0.000001).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (1.56986e-05, 0.0585628, -4.61045e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (0.000016, 0.058563, -0.000005).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (3.22285e-05, 0.0585632, -1.05009e-05) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (0.000032, 0.058563, -0.000011).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (0.000301761, 0.0575941, -8.07168e-05) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (0.000302, 0.057594, -0.000081).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (3.52938e-05, 0.0585636, -1.24026e-05) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (0.000035, 0.058564, -0.000012).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-3.09654e-06, 0.0583382, 2.19965e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (-0.000003, 0.058338, 0.000002).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-0.000159474, 0.057787, 1.60381e-05) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (-0.000159, 0.057787, 0.000016).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (8.63296e-08, 0.0449376, 1.51655e-07) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (0.000000, 0.044938, 0.000000).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-1.65628e-05, 0.0405221, -1.07592e-05) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (-0.000017, 0.040522, -0.000011).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-2.69788e-05, 0.0405217, -1.81589e-05) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (-0.000027, 0.040522, -0.000018).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-3.07805e-05, 0.0405211, -2.23067e-05) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (-0.000031, 0.040521, -0.000022).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (2.69761e-06, 0.00122429, -2.60583e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (0.000003, 0.001224, -0.000003).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-1.51838e-06, -0.022325, 8.08286e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (-0.000002, -0.022325, 0.000008).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-2.49405e-07, -0.0236768, 9.43038e-07) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (-0.000000, -0.023677, 0.000001).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (8.5877e-06, -0.0397333, -2.34517e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (0.000009, -0.039733, -0.000002).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-0.00083222, -0.0426898, -0.00103815) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (-0.000832, -0.042690, -0.001038).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-0.000673287, -0.043588, -0.00107159) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (-0.000673, -0.043588, -0.001072).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (0.000185545, -0.0549224, -0.0036347) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (0.000186, -0.054922, -0.003635).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (0.000694338, -0.0565504, -0.00325112) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (0.000694, -0.056550, -0.003251).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (0.00153897, -0.0587541, -0.00283795) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (0.001539, -0.058754, -0.002838).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-2.2637e-06, -0.0601724, -1.60915e-05) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (-0.000002, -0.060172, -0.000016).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (4.2494e-06, -0.0959939, -2.90868e-07) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (0.000004, -0.095994, -0.000000).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-7.72276e-07, -0.0959916, 8.33546e-07) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (-0.000001, -0.095992, 0.000001).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (9.0003e-05, -0.0973526, -0.000842795) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (0.000090, -0.097353, -0.000843).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-1.00851e-05, -0.0989243, -2.42125e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating ion velocity at (-0.000010, -0.098924, -0.000002).
+AvalancheMC::DriftLine: Abandoned the calculation.
+Script: Electrons have drifted. It took 1217.46s to run.
+Sensor::ExportSignal: File 'Signal.csv' exported.
+Sensor::ExportSignal: File 'ConvolutedSignal.csv' exported.
+Number of Ion Drifts: 26
+End of Program

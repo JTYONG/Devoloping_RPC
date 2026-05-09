@@ -1,0 +1,12 @@
+# neBEM outputs
+neBEMOut/
+*.out
+
+# build artifacts
+build*/
+Debug*/
+
+# common large/binary outputs
+*.root
+*.bin
+*.dat

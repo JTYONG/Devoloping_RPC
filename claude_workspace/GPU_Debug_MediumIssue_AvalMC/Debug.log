@@ -1,0 +1,125 @@
+neBEMV1.9.09 TimeElapsed ===> 0.008339 seconds to set up RH vector.
+ComputeSolution: Solve ...
+Solve: computing solution for each element:   4961 ...
+Solve: Solution over for all elements.
+Solve: System charge zero constraint.
+Solve: Computing solution at the collocation points for comparison.
+Solve: Influence matrix in memory.
+Solve: Computed values at the collocation points for comparison.
+Solve: Error maximum on element 4776 and its magnitude is 4.48059e+07.
+Elapsed time: 1.01686
+ComputeSolution: Solve done!
+neBEMV1.9.09 TimeElapsed ===> 15.1575 seconds to compute solution.
+ComputeSolution: neBEM solution ends ...
+neBEMV1.9.09 TimeElapsed ===> 6233.14 seconds to complete solve
+neBEMPrepareWeightingField: Preparing weighting field for set 1.
+neBEMPrepareWeightingField: Computed weighting field solution
+neBEMPrepareWeightingField: Computed primitive-averaged weighting field solutions
+ComponentNeBem3d::Initialise:
+    Prepared weighting field for readout group "BottomGraphite".
+neBEMPrepareWeightingField: Preparing weighting field for set 2.
+neBEMPrepareWeightingField: Computed weighting field solution
+neBEMPrepareWeightingField: Computed primitive-averaged weighting field solutions
+ComponentNeBem3d::Initialise:
+    Prepared weighting field for readout group "BottomMylar".
+neBEMPrepareWeightingField: Preparing weighting field for set 3.
+neBEMPrepareWeightingField: Computed weighting field solution
+neBEMPrepareWeightingField: Computed primitive-averaged weighting field solutions
+ComponentNeBem3d::Initialise:
+    Prepared weighting field for readout group "BottomReadout".
+neBEMPrepareWeightingField: Preparing weighting field for set 4.
+neBEMPrepareWeightingField: Computed weighting field solution
+neBEMPrepareWeightingField: Computed primitive-averaged weighting field solutions
+ComponentNeBem3d::Initialise:
+    Prepared weighting field for readout group "BottomResistiveGlass".
+neBEMPrepareWeightingField: Preparing weighting field for set 5.
+neBEMPrepareWeightingField: Computed weighting field solution
+neBEMPrepareWeightingField: Computed primitive-averaged weighting field solutions
+ComponentNeBem3d::Initialise:
+    Prepared weighting field for readout group "GasGap".
+neBEMPrepareWeightingField: Preparing weighting field for set 6.
+neBEMPrepareWeightingField: Computed weighting field solution
+neBEMPrepareWeightingField: Computed primitive-averaged weighting field solutions
+ComponentNeBem3d::Initialise:
+    Prepared weighting field for readout group "TopGraphite".
+neBEMPrepareWeightingField: Preparing weighting field for set 7.
+neBEMPrepareWeightingField: Computed weighting field solution
+neBEMPrepareWeightingField: Computed primitive-averaged weighting field solutions
+ComponentNeBem3d::Initialise:
+    Prepared weighting field for readout group "TopMylar".
+neBEMPrepareWeightingField: Preparing weighting field for set 8.
+neBEMPrepareWeightingField: Computed weighting field solution
+neBEMPrepareWeightingField: Computed primitive-averaged weighting field solutions
+ComponentNeBem3d::Initialise:
+    Prepared weighting field for readout group "TopReadout".
+neBEMPrepareWeightingField: Preparing weighting field for set 9.
+neBEMPrepareWeightingField: Computed weighting field solution
+neBEMPrepareWeightingField: Computed primitive-averaged weighting field solutions
+ComponentNeBem3d::Initialise:
+    Prepared weighting field for readout group "TopResistiveGlass".
+Sensor::AddElectrode:
+    Added readout electrode "BottomReadout".
+    All signals are reset.
+Sensor::SetTimeWindow: Resetting all signals.
+ComponentNeBem3d::MagneticField: Field at (1.51517e-06, 0.0908372, -4.36492e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (0.000002, 0.090837, -0.000004).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (1.48347e-06, 0.0908366, -4.68298e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (0.000001, 0.090837, -0.000005).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-5.86621e-07, 0.0529487, 1.53364e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (-0.000001, 0.052949, 0.000002).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (8.25386e-06, 0.0470774, -1.61211e-05) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (0.000008, 0.047077, -0.000016).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (1.27809e-05, 0.0470803, -2.23286e-05) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (0.000013, 0.047080, -0.000022).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (1.983e-05, 0.0470849, -3.19944e-05) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (0.000020, 0.047085, -0.000032).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (7.62395e-07, 0.0414486, 1.7673e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (0.000001, 0.041449, 0.000002).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (7.08454e-06, 0.0339813, 4.38887e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (0.000007, 0.033981, 0.000004).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-5.79152e-07, 0.0252518, 6.17091e-07) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (-0.000001, 0.025252, 0.000001).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (5.73494e-06, 0.0239927, -5.30629e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (0.000006, 0.023993, -0.000005).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-3.14222e-06, -0.00191332, 3.21265e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (-0.000003, -0.001913, 0.000003).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-1.19372e-05, -0.0259963, -1.00353e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (-0.000012, -0.025996, -0.000001).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (2.56188e-07, -0.0269223, -3.43337e-07) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (0.000000, -0.026922, -0.000000).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-3.06365e-06, -0.0402453, 1.43449e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (-0.000003, -0.040245, 0.000001).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (1.23892e-05, -0.0521399, 8.55691e-07) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (0.000012, -0.052140, 0.000001).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-3.69277e-06, -0.0569188, 1.54309e-05) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (-0.000004, -0.056919, 0.000015).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (-7.25758e-06, -0.0569188, 3.03271e-05) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (-0.000007, -0.056919, 0.000030).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (1.81573e-07, -0.0642636, 1.10867e-07) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (0.000000, -0.064264, 0.000000).
+AvalancheMC::DriftLine: Abandoned the calculation.
+ComponentNeBem3d::MagneticField: Field at (1.29222e-06, -0.0646337, 2.47746e-06) is (0, 0, 0)
+AvalancheMC::GetVelocity: Error calculating hole velocity at (0.000001, -0.064634, 0.000002).
+AvalancheMC::DriftLine: Abandoned the calculation.
+Script: Electrons have drifted. It took 2051.08s to run.
+Sensor::ExportSignal: File 'Signal.csv' exported.
+Sensor::ExportSignal: File 'Charge.csv' exported.
+Sensor::ExportSignal: File 'ConvolutedSignal.csv' exported.
+End of Program
