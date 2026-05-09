@@ -1,0 +1,70 @@
+# ########################################################################################
+# Use the code in this section for standalone projects
+cmake_minimum_required(VERSION 3.18 FATAL_ERROR)
+project(RPC LANGUAGES CXX)
+
+# ---GPU (CUDA) toggle-----------------------------------------------------------
+# Turn this ON only when your Garfield++ was built with -DUSEGPU=ON.
+# Configure with: cmake -DUSE_GPU=ON ..
+option(USE_GPU "Build against a Garfield++ that was compiled with CUDA/GPU support" OFF)
+
+if(USE_GPU)
+  enable_language(CUDA)
+  find_package(CUDAToolkit REQUIRED)
+
+  # Required by CMake >= 3.18. "native" picks the architecture of the GPU
+  # on the build machine; override at configure time if you cross-compile,
+  # e.g. -DCMAKE_CUDA_ARCHITECTURES=80 for A100, 86 for RTX 30xx, 89 for RTX 40xx.
+  if(NOT DEFINED CMAKE_CUDA_ARCHITECTURES)
+    set(CMAKE_CUDA_ARCHITECTURES native)
+  endif()
+
+  message(STATUS "GPU support: ENABLED (CUDA ${CUDAToolkit_VERSION}, archs=${CMAKE_CUDA_ARCHITECTURES})")
+else()
+  message(STATUS "GPU support: disabled (configure with -DUSE_GPU=ON to enable)")
+endif()
+
+if(NOT TARGET Garfield::Garfield)
+  find_package(Garfield REQUIRED)
+endif()
+find_package(OpenMP REQUIRED)
+# ########################################################################################
+
+# ---Build executable------------------------------------------------------------
+add_executable(AvalMC_addIons AvalMC_addIons.C)
+target_link_libraries(AvalMC_addIons Garfield::Garfield OpenMP::OpenMP_CXX)
+
+if(USE_GPU)
+  # Link the CUDA runtime explicitly so the executable resolves the CUDA
+  # symbols that Garfield's GPU code pulls in.
+  target_link_libraries(AvalMC_addIons CUDA::cudart)
+endif()
+
+# ---Build executable------------------------------------------------------------
+#add_executable(STDdebug STDdebug.C)
+#target_link_libraries(STDdebug Garfield::Garfield OpenMP::OpenMP_CXX)
+#if(USE_GPU)
+#  target_link_libraries(STDdebug CUDA::cudart)
+#endif()
+
+
+# ---Copy all files locally to the build directory-------------------------------
+foreach(_file c2h2f4_ic4h10_sf6.gas TimingRPCGas.gas)
+  configure_file(${_file} ${_file} COPYONLY)
+endforeach()
+
+#file(COPY neBEMOut DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+if(IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/neBEMOut)
+	file(COPY neBEMOut DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+  message(STATUS "Copied neBEMOut to build directory")
+else()
+  message(STATUS "neBEMOut not found, skipping copy")
+endif()
+
+if(IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/neBEMInp)
+	file(COPY neBEMInp DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+  message(STATUS "Copied neBEMInp to build directory")
+else()
+  message(STATUS "neBEMInp not found, skipping copy")
+endif()

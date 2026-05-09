@@ -1,0 +1,350 @@
+    Prepared weighting field for readout group "TopResistiveGlass".
+neBEMMessage: FastPFAtPoint: point in none of the blocks!
+
+neBEMMessage: FastPFAtPoint - celli < 1
+
+neBEMMessage: FastPFAtPoint - celli > nbXCells
+
+neBEMMessage: FastPFAtPoint - cellj < 1
+
+neBEMMessage: FastPFAtPoint - cellj > nbYCells
+
+neBEMMessage: FastPFAtPoint - cellk < 1
+
+
+ *** Break *** segmentation violation
+
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+
+Thread 15 (Thread 0x7cd0b8094000 (LWP 51776) "AvalMC_addIons"):
+#0  0x00007cd197e98d71 in __futex_abstimed_wait_common64 (private=31953, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x564dd9423128) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=31953, abstime=0x0, clockid=0, expected=0, futex_word=0x564dd9423128) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word
+entry=0x564dd9423128, expected=expected
+entry=0, clockid=clockid
+entry=0, abstime=abstime
+entry=0x0, private=private
+entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007cd197e9b7ed in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x564dd9423140, cond=0x564dd9423100) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x564dd9423100, mutex=0x564dd9423140) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007cd0ea39ac1d in void __kmp_suspend_64<false, true>(int, kmp_flag_64<false, true>*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#6  0x00007cd0ea361d5f in bool __kmp_wait_template<kmp_flag_64<false, true>, true, false, true>(kmp_info*, kmp_flag_64<false, true>*, void*) [clone .constprop.0] [clone .isra.0] () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#7  0x00007cd0ea365899 in __kmp_hyper_barrier_release(barrier_type, kmp_info*, int, int, int, void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#8  0x00007cd0ea36a73c in __kmp_fork_barrier(int, int) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#9  0x00007cd0ea335f26 in __kmp_launch_thread () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#10 0x00007cd0ea398ea2 in __kmp_launch_worker(void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#11 0x00007cd197e9caa4 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#12 0x00007cd197f29c6c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 14 (Thread 0x7cd0b7893000 (LWP 51777) "AvalMC_addIons"):
+#0  0x00007cd197e98d71 in __futex_abstimed_wait_common64 (private=22093, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x564dd945ce68) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=22093, abstime=0x0, clockid=0, expected=0, futex_word=0x564dd945ce68) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word
+entry=0x564dd945ce68, expected=expected
+entry=0, clockid=clockid
+entry=0, abstime=abstime
+entry=0x0, private=private
+entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007cd197e9b7ed in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x564dd945ce80, cond=0x564dd945ce40) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x564dd945ce40, mutex=0x564dd945ce80) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007cd0ea39ac1d in void __kmp_suspend_64<false, true>(int, kmp_flag_64<false, true>*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#6  0x00007cd0ea361d5f in bool __kmp_wait_template<kmp_flag_64<false, true>, true, false, true>(kmp_info*, kmp_flag_64<false, true>*, void*) [clone .constprop.0] [clone .isra.0] () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#7  0x00007cd0ea365899 in __kmp_hyper_barrier_release(barrier_type, kmp_info*, int, int, int, void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#8  0x00007cd0ea36a73c in __kmp_fork_barrier(int, int) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#9  0x00007cd0ea335f26 in __kmp_launch_thread () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#10 0x00007cd0ea398ea2 in __kmp_launch_worker(void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#11 0x00007cd197e9caa4 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#12 0x00007cd197f29c6c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 13 (Thread 0x7cd0b7092000 (LWP 51778) "AvalMC_addIons"):
+#0  0x00007cd197e98d71 in __futex_abstimed_wait_common64 (private=31953, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x564dd945fd68) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=31953, abstime=0x0, clockid=0, expected=0, futex_word=0x564dd945fd68) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word
+entry=0x564dd945fd68, expected=expected
+entry=0, clockid=clockid
+entry=0, abstime=abstime
+entry=0x0, private=private
+entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007cd197e9b7ed in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x564dd945fd80, cond=0x564dd945fd40) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x564dd945fd40, mutex=0x564dd945fd80) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007cd0ea39ac1d in void __kmp_suspend_64<false, true>(int, kmp_flag_64<false, true>*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#6  0x00007cd0ea361d5f in bool __kmp_wait_template<kmp_flag_64<false, true>, true, false, true>(kmp_info*, kmp_flag_64<false, true>*, void*) [clone .constprop.0] [clone .isra.0] () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#7  0x00007cd0ea365899 in __kmp_hyper_barrier_release(barrier_type, kmp_info*, int, int, int, void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#8  0x00007cd0ea36a73c in __kmp_fork_barrier(int, int) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#9  0x00007cd0ea335f26 in __kmp_launch_thread () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#10 0x00007cd0ea398ea2 in __kmp_launch_worker(void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#11 0x00007cd197e9caa4 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#12 0x00007cd197f29c6c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 12 (Thread 0x7cd0b6891000 (LWP 51779) "AvalMC_addIons"):
+#0  0x00007cd197e98d71 in __futex_abstimed_wait_common64 (private=22093, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x564dd9462de8) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=22093, abstime=0x0, clockid=0, expected=0, futex_word=0x564dd9462de8) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word
+entry=0x564dd9462de8, expected=expected
+entry=0, clockid=clockid
+entry=0, abstime=abstime
+entry=0x0, private=private
+entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007cd197e9b7ed in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x564dd9462e00, cond=0x564dd9462dc0) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x564dd9462dc0, mutex=0x564dd9462e00) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007cd0ea39ac1d in void __kmp_suspend_64<false, true>(int, kmp_flag_64<false, true>*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#6  0x00007cd0ea361d5f in bool __kmp_wait_template<kmp_flag_64<false, true>, true, false, true>(kmp_info*, kmp_flag_64<false, true>*, void*) [clone .constprop.0] [clone .isra.0] () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#7  0x00007cd0ea365899 in __kmp_hyper_barrier_release(barrier_type, kmp_info*, int, int, int, void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#8  0x00007cd0ea36a73c in __kmp_fork_barrier(int, int) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#9  0x00007cd0ea335f26 in __kmp_launch_thread () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#10 0x00007cd0ea398ea2 in __kmp_launch_worker(void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#11 0x00007cd197e9caa4 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#12 0x00007cd197f29c6c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 11 (Thread 0x7cd0b6090000 (LWP 51780) "AvalMC_addIons"):
+#0  0x00007cd197e98d71 in __futex_abstimed_wait_common64 (private=31953, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x564dd9465e68) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=31953, abstime=0x0, clockid=0, expected=0, futex_word=0x564dd9465e68) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word
+entry=0x564dd9465e68, expected=expected
+entry=0, clockid=clockid
+entry=0, abstime=abstime
+entry=0x0, private=private
+entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007cd197e9b7ed in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x564dd9465e80, cond=0x564dd9465e40) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x564dd9465e40, mutex=0x564dd9465e80) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007cd0ea39ac1d in void __kmp_suspend_64<false, true>(int, kmp_flag_64<false, true>*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#6  0x00007cd0ea361d5f in bool __kmp_wait_template<kmp_flag_64<false, true>, true, false, true>(kmp_info*, kmp_flag_64<false, true>*, void*) [clone .constprop.0] [clone .isra.0] () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#7  0x00007cd0ea365899 in __kmp_hyper_barrier_release(barrier_type, kmp_info*, int, int, int, void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#8  0x00007cd0ea36a73c in __kmp_fork_barrier(int, int) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#9  0x00007cd0ea335f26 in __kmp_launch_thread () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#10 0x00007cd0ea398ea2 in __kmp_launch_worker(void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#11 0x00007cd197e9caa4 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#12 0x00007cd197f29c6c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 10 (Thread 0x7cd0b588f000 (LWP 51781) "AvalMC_addIons"):
+#0  0x00007cd197e98d71 in __futex_abstimed_wait_common64 (private=22093, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x564dd9468ee8) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=22093, abstime=0x0, clockid=0, expected=0, futex_word=0x564dd9468ee8) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word
+entry=0x564dd9468ee8, expected=expected
+entry=0, clockid=clockid
+entry=0, abstime=abstime
+entry=0x0, private=private
+entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007cd197e9b7ed in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x564dd9468f00, cond=0x564dd9468ec0) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x564dd9468ec0, mutex=0x564dd9468f00) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007cd0ea39ac1d in void __kmp_suspend_64<false, true>(int, kmp_flag_64<false, true>*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#6  0x00007cd0ea361d5f in bool __kmp_wait_template<kmp_flag_64<false, true>, true, false, true>(kmp_info*, kmp_flag_64<false, true>*, void*) [clone .constprop.0] [clone .isra.0] () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#7  0x00007cd0ea365899 in __kmp_hyper_barrier_release(barrier_type, kmp_info*, int, int, int, void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#8  0x00007cd0ea36a73c in __kmp_fork_barrier(int, int) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#9  0x00007cd0ea335f26 in __kmp_launch_thread () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#10 0x00007cd0ea398ea2 in __kmp_launch_worker(void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#11 0x00007cd197e9caa4 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#12 0x00007cd197f29c6c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 9 (Thread 0x7cd0b508e000 (LWP 51782) "AvalMC_addIons"):
+#0  0x00007cd197e98d71 in __futex_abstimed_wait_common64 (private=31953, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x564dd946bfac) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=31953, abstime=0x0, clockid=0, expected=0, futex_word=0x564dd946bfac) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word
+entry=0x564dd946bfac, expected=expected
+entry=0, clockid=clockid
+entry=0, abstime=abstime
+entry=0x0, private=private
+entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007cd197e9b7ed in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x564dd946bfc0, cond=0x564dd946bf80) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x564dd946bf80, mutex=0x564dd946bfc0) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007cd0ea39ac1d in void __kmp_suspend_64<false, true>(int, kmp_flag_64<false, true>*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#6  0x00007cd0ea361d5f in bool __kmp_wait_template<kmp_flag_64<false, true>, true, false, true>(kmp_info*, kmp_flag_64<false, true>*, void*) [clone .constprop.0] [clone .isra.0] () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#7  0x00007cd0ea365899 in __kmp_hyper_barrier_release(barrier_type, kmp_info*, int, int, int, void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#8  0x00007cd0ea36a73c in __kmp_fork_barrier(int, int) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#9  0x00007cd0ea335f26 in __kmp_launch_thread () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#10 0x00007cd0ea398ea2 in __kmp_launch_worker(void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#11 0x00007cd197e9caa4 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#12 0x00007cd197f29c6c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 8 (Thread 0x7cd0b488d000 (LWP 51783) "AvalMC_addIons"):
+#0  0x00007cd197e98d71 in __futex_abstimed_wait_common64 (private=22093, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x564dd946f028) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=22093, abstime=0x0, clockid=0, expected=0, futex_word=0x564dd946f028) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word
+entry=0x564dd946f028, expected=expected
+entry=0, clockid=clockid
+entry=0, abstime=abstime
+entry=0x0, private=private
+entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007cd197e9b7ed in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x564dd946f040, cond=0x564dd946f000) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x564dd946f000, mutex=0x564dd946f040) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007cd0ea39ac1d in void __kmp_suspend_64<false, true>(int, kmp_flag_64<false, true>*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#6  0x00007cd0ea361d5f in bool __kmp_wait_template<kmp_flag_64<false, true>, true, false, true>(kmp_info*, kmp_flag_64<false, true>*, void*) [clone .constprop.0] [clone .isra.0] () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#7  0x00007cd0ea365899 in __kmp_hyper_barrier_release(barrier_type, kmp_info*, int, int, int, void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#8  0x00007cd0ea36a73c in __kmp_fork_barrier(int, int) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#9  0x00007cd0ea335f26 in __kmp_launch_thread () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#10 0x00007cd0ea398ea2 in __kmp_launch_worker(void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#11 0x00007cd197e9caa4 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#12 0x00007cd197f29c6c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 7 (Thread 0x7cd097fff000 (LWP 51784) "AvalMC_addIons"):
+#0  0x00007cd197e98d71 in __futex_abstimed_wait_common64 (private=31953, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x564dd94720a8) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=31953, abstime=0x0, clockid=0, expected=0, futex_word=0x564dd94720a8) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word
+entry=0x564dd94720a8, expected=expected
+entry=0, clockid=clockid
+entry=0, abstime=abstime
+entry=0x0, private=private
+entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007cd197e9b7ed in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x564dd94720c0, cond=0x564dd9472080) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x564dd9472080, mutex=0x564dd94720c0) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007cd0ea39ac1d in void __kmp_suspend_64<false, true>(int, kmp_flag_64<false, true>*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#6  0x00007cd0ea361d5f in bool __kmp_wait_template<kmp_flag_64<false, true>, true, false, true>(kmp_info*, kmp_flag_64<false, true>*, void*) [clone .constprop.0] [clone .isra.0] () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#7  0x00007cd0ea365899 in __kmp_hyper_barrier_release(barrier_type, kmp_info*, int, int, int, void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#8  0x00007cd0ea36a73c in __kmp_fork_barrier(int, int) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#9  0x00007cd0ea335f26 in __kmp_launch_thread () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#10 0x00007cd0ea398ea2 in __kmp_launch_worker(void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#11 0x00007cd197e9caa4 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#12 0x00007cd197f29c6c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 6 (Thread 0x7cd0977fe000 (LWP 51785) "AvalMC_addIons"):
+#0  0x00007cd197e98d71 in __futex_abstimed_wait_common64 (private=22093, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x564dd9475128) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=22093, abstime=0x0, clockid=0, expected=0, futex_word=0x564dd9475128) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word
+entry=0x564dd9475128, expected=expected
+entry=0, clockid=clockid
+entry=0, abstime=abstime
+entry=0x0, private=private
+entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007cd197e9b7ed in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x564dd9475140, cond=0x564dd9475100) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x564dd9475100, mutex=0x564dd9475140) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007cd0ea39ac1d in void __kmp_suspend_64<false, true>(int, kmp_flag_64<false, true>*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#6  0x00007cd0ea361d5f in bool __kmp_wait_template<kmp_flag_64<false, true>, true, false, true>(kmp_info*, kmp_flag_64<false, true>*, void*) [clone .constprop.0] [clone .isra.0] () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#7  0x00007cd0ea365899 in __kmp_hyper_barrier_release(barrier_type, kmp_info*, int, int, int, void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#8  0x00007cd0ea36a73c in __kmp_fork_barrier(int, int) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#9  0x00007cd0ea335f26 in __kmp_launch_thread () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#10 0x00007cd0ea398ea2 in __kmp_launch_worker(void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#11 0x00007cd197e9caa4 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#12 0x00007cd197f29c6c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 5 (Thread 0x7cd096ffd000 (LWP 51786) "AvalMC_addIons"):
+#0  0x00007cd197e98d71 in __futex_abstimed_wait_common64 (private=31953, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x564dd94781e8) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=31953, abstime=0x0, clockid=0, expected=0, futex_word=0x564dd94781e8) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word
+entry=0x564dd94781e8, expected=expected
+entry=0, clockid=clockid
+entry=0, abstime=abstime
+entry=0x0, private=private
+entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007cd197e9b7ed in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x564dd9478200, cond=0x564dd94781c0) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x564dd94781c0, mutex=0x564dd9478200) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007cd0ea39ac1d in void __kmp_suspend_64<false, true>(int, kmp_flag_64<false, true>*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#6  0x00007cd0ea361d5f in bool __kmp_wait_template<kmp_flag_64<false, true>, true, false, true>(kmp_info*, kmp_flag_64<false, true>*, void*) [clone .constprop.0] [clone .isra.0] () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#7  0x00007cd0ea365899 in __kmp_hyper_barrier_release(barrier_type, kmp_info*, int, int, int, void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#8  0x00007cd0ea36a73c in __kmp_fork_barrier(int, int) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#9  0x00007cd0ea335f26 in __kmp_launch_thread () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#10 0x00007cd0ea398ea2 in __kmp_launch_worker(void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#11 0x00007cd197e9caa4 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#12 0x00007cd197f29c6c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 4 (Thread 0x7cd0967fc000 (LWP 51787) "AvalMC_addIons"):
+#0  0x00007cd197e98d71 in __futex_abstimed_wait_common64 (private=22093, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x564dd947b268) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=22093, abstime=0x0, clockid=0, expected=0, futex_word=0x564dd947b268) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word
+entry=0x564dd947b268, expected=expected
+entry=0, clockid=clockid
+entry=0, abstime=abstime
+entry=0x0, private=private
+entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007cd197e9b7ed in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x564dd947b280, cond=0x564dd947b240) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x564dd947b240, mutex=0x564dd947b280) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007cd0ea39ac1d in void __kmp_suspend_64<false, true>(int, kmp_flag_64<false, true>*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#6  0x00007cd0ea361d5f in bool __kmp_wait_template<kmp_flag_64<false, true>, true, false, true>(kmp_info*, kmp_flag_64<false, true>*, void*) [clone .constprop.0] [clone .isra.0] () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#7  0x00007cd0ea365899 in __kmp_hyper_barrier_release(barrier_type, kmp_info*, int, int, int, void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#8  0x00007cd0ea36a73c in __kmp_fork_barrier(int, int) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#9  0x00007cd0ea335f26 in __kmp_launch_thread () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#10 0x00007cd0ea398ea2 in __kmp_launch_worker(void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#11 0x00007cd197e9caa4 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#12 0x00007cd197f29c6c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 3 (Thread 0x7cd095ffb000 (LWP 51788) "AvalMC_addIons"):
+#0  0x00007cd197e98d71 in __futex_abstimed_wait_common64 (private=31953, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x564dd947e2e8) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=31953, abstime=0x0, clockid=0, expected=0, futex_word=0x564dd947e2e8) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word
+entry=0x564dd947e2e8, expected=expected
+entry=0, clockid=clockid
+entry=0, abstime=abstime
+entry=0x0, private=private
+entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007cd197e9b7ed in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x564dd947e300, cond=0x564dd947e2c0) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x564dd947e2c0, mutex=0x564dd947e300) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007cd0ea39ac1d in void __kmp_suspend_64<false, true>(int, kmp_flag_64<false, true>*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#6  0x00007cd0ea361d5f in bool __kmp_wait_template<kmp_flag_64<false, true>, true, false, true>(kmp_info*, kmp_flag_64<false, true>*, void*) [clone .constprop.0] [clone .isra.0] () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#7  0x00007cd0ea365899 in __kmp_hyper_barrier_release(barrier_type, kmp_info*, int, int, int, void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#8  0x00007cd0ea36a73c in __kmp_fork_barrier(int, int) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#9  0x00007cd0ea335f26 in __kmp_launch_thread () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#10 0x00007cd0ea398ea2 in __kmp_launch_worker(void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#11 0x00007cd197e9caa4 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#12 0x00007cd197f29c6c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 2 (Thread 0x7cd0957fa000 (LWP 51789) "AvalMC_addIons"):
+#0  0x00007cd197e98d71 in __futex_abstimed_wait_common64 (private=22093, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x564dd948136c) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=22093, abstime=0x0, clockid=0, expected=0, futex_word=0x564dd948136c) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word
+entry=0x564dd948136c, expected=expected
+entry=0, clockid=clockid
+entry=0, abstime=abstime
+entry=0x0, private=private
+entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007cd197e9b7ed in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x564dd9481380, cond=0x564dd9481340) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x564dd9481340, mutex=0x564dd9481380) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007cd0ea39ac1d in void __kmp_suspend_64<false, true>(int, kmp_flag_64<false, true>*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#6  0x00007cd0ea361d5f in bool __kmp_wait_template<kmp_flag_64<false, true>, true, false, true>(kmp_info*, kmp_flag_64<false, true>*, void*) [clone .constprop.0] [clone .isra.0] () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#7  0x00007cd0ea365899 in __kmp_hyper_barrier_release(barrier_type, kmp_info*, int, int, int, void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#8  0x00007cd0ea36a73c in __kmp_fork_barrier(int, int) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#9  0x00007cd0ea335f26 in __kmp_launch_thread () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#10 0x00007cd0ea398ea2 in __kmp_launch_worker(void*) () from /home/sus/miniforge3/envs/physics/lib/libgomp.so.1
+#11 0x00007cd197e9caa4 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#12 0x00007cd197f29c6c in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 1 (Thread 0x7cd1990b0000 (LWP 51756) "AvalMC_addIons"):
+#0  0x00007cd197f10813 in __GI___wait4 (pid=62435, stat_loc=stat_loc
+entry=0x7ffdf2a59668, options=options
+entry=0, usage=usage
+entry=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:30
+#1  0x00007cd197f1091b in __GI___waitpid (pid=<optimized out>, stat_loc=stat_loc
+entry=0x7ffdf2a59668, options=options
+entry=0) at ./posix/waitpid.c:38
+#2  0x00007cd197e585bb in do_system (line=<optimized out>) at ../sysdeps/posix/system.c:172
+#3  0x00007cd198948268 in TUnixSystem::StackTrace() () from /home/sus/miniforge3/envs/physics/lib/libCore.so.6.38
+#4  0x00007cd198947b66 in TUnixSystem::DispatchSignals(ESignals) () from /home/sus/miniforge3/envs/physics/lib/libCore.so.6.38
+#5  <signal handler called>
+#6  0x00007cd19c7e4ce7 in neBEM::FastPFAtPoint(neBEM::Point3D*, double*, neBEM::Vector3D*) () from /home/sus/miniforge3/envs/physics/lib/libneBEM.so
+#7  0x00007cd19c7fc306 in neBEM::neBEMPF(neBEM::Point3D*, double*, neBEM::Vector3D*) () from /home/sus/miniforge3/envs/physics/lib/libneBEM.so
+#8  0x00007cd199c135f0 in Garfield::ComponentNeBem3d::ElectricField(double, double, double, double&, double&, double&, double&, Garfield::Medium*&, int&) () from /home/sus/miniforge3/envs/physics/lib/libGarfield.so.0.3
+#9  0x00007cd199da98f1 in Garfield::ViewField::Efield(double, double, double, Garfield::ViewField::Parameter) const () from /home/sus/miniforge3/envs/physics/lib/libGarfield.so.0.3
+#10 0x00007cd1993d6f8d in TF1::EvalPar(double const*, double const*) () from /home/sus/miniforge3/envs/physics/lib/libHist.so.6.38
+#11 0x00007cd1993d2e36 in TF1::Eval(double, double, double, double) const () from /home/sus/miniforge3/envs/physics/lib/libHist.so.6.38
+#12 0x00007cd199da90ba in (anonymous namespace)::SampleRange(double, double, double, double, TF2*, double&, double&) [clone .constprop.0] () from /home/sus/miniforge3/envs/physics/lib/libGarfield.so.0.3
+#13 0x00007cd199db1d4e in Garfield::ViewField::Draw2d(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, double) () from /home/sus/miniforge3/envs/physics/lib/libGarfield.so.0.3
+#14 0x00007cd199db2a08 in Garfield::ViewField::PlotContour(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) () from /home/sus/miniforge3/envs/physics/lib/libGarfield.so.0.3
+#15 0x0000564dc2c2193d in main ()
+===========================================================
+
+
+The lines below might hint at the cause of the crash. If you see question
+marks as part of the stack trace, try to recompile with debugging information
+enabled and export CLING_DEBUG=1 environment variable before running.
+You may get help by asking at the ROOT forum https://root.cern/forum
+preferably using the command (.forum bug) in the ROOT prompt.
+Only if you are really convinced it is a bug in ROOT then please submit a
+report at https://root.cern/bugs or (preferably) using the command (.gh bug) in
+the ROOT prompt. Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+===========================================================
+#6  0x00007cd19c7e4ce7 in neBEM::FastPFAtPoint(neBEM::Point3D*, double*, neBEM::Vector3D*) () from /home/sus/miniforge3/envs/physics/lib/libneBEM.so
+#7  0x00007cd19c7fc306 in neBEM::neBEMPF(neBEM::Point3D*, double*, neBEM::Vector3D*) () from /home/sus/miniforge3/envs/physics/lib/libneBEM.so
+#8  0x00007cd199c135f0 in Garfield::ComponentNeBem3d::ElectricField(double, double, double, double&, double&, double&, double&, Garfield::Medium*&, int&) () from /home/sus/miniforge3/envs/physics/lib/libGarfield.so.0.3
+#9  0x00007cd199da98f1 in Garfield::ViewField::Efield(double, double, double, Garfield::ViewField::Parameter) const () from /home/sus/miniforge3/envs/physics/lib/libGarfield.so.0.3
+#10 0x00007cd1993d6f8d in TF1::EvalPar(double const*, double const*) () from /home/sus/miniforge3/envs/physics/lib/libHist.so.6.38
+#11 0x00007cd1993d2e36 in TF1::Eval(double, double, double, double) const () from /home/sus/miniforge3/envs/physics/lib/libHist.so.6.38
+#12 0x00007cd199da90ba in (anonymous namespace)::SampleRange(double, double, double, double, TF2*, double&, double&) [clone .constprop.0] () from /home/sus/miniforge3/envs/physics/lib/libGarfield.so.0.3
+#13 0x00007cd199db1d4e in Garfield::ViewField::Draw2d(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, double) () from /home/sus/miniforge3/envs/physics/lib/libGarfield.so.0.3
+#14 0x00007cd199db2a08 in Garfield::ViewField::PlotContour(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) () from /home/sus/miniforge3/envs/physics/lib/libGarfield.so.0.3
+#15 0x0000564dc2c2193d in main ()
+===========================================================

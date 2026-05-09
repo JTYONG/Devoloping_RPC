@@ -1,3 +1,0 @@
-/home/sus/RPCFROMEXAMPLE/Workspace/Debug_Medium_PlotField/build/CMakeFiles/Nebem_FieldPlot.dir
-/home/sus/RPCFROMEXAMPLE/Workspace/Debug_Medium_PlotField/build/CMakeFiles/edit_cache.dir
-/home/sus/RPCFROMEXAMPLE/Workspace/Debug_Medium_PlotField/build/CMakeFiles/rebuild_cache.dir
