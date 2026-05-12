@@ -177,12 +177,11 @@ int main(int argc, char *argv[]) {
 
   // Materials needed.
     MediumPlastic* glass = new Garfield::MediumPlastic();
-   //Medium* graphite = new Garfield::Medium();
-   MediumConductor* graphite = new Garfield::MediumConductor();
+    Medium* graphite = new Garfield::Medium();
     MediumPlastic* mylar = new Garfield::MediumPlastic();
     MediumConductor* copper = new Garfield::MediumConductor();
         
-   // graphite->SetDielectricConstant(12.0);
+    graphite->SetDielectricConstant(12.0);
     glass->SetDielectricConstant(10.0);
     mylar->SetDielectricConstant(3.1);
 
@@ -229,7 +228,7 @@ int main(int argc, char *argv[]) {
                                                                fAnodeCathodeThickness/2, fDetectorSizeZ/2);
     Box_TopGraphite->SetLabel("TopGraphite");
     Box_TopGraphite->SetBoundaryPotential(fCathodeVoltage); // Cathode
-    //Box_TopGraphite->SetBoundaryDielectric();
+    Box_TopGraphite->SetBoundaryDielectric();
     rpc_geometry->AddSolid(Box_TopGraphite,graphite);
     const std::string label3 = "TopGraphite";
 
@@ -237,7 +236,7 @@ int main(int argc, char *argv[]) {
                                                                0, fDetectorSizeX/2,
                                                                fAnodeCathodeThickness/2, fDetectorSizeZ/2);
     Box_BottomGraphite->SetLabel("BottomGraphite");
-    //Box_BottomGraphite->SetBoundaryDielectric();
+    Box_BottomGraphite->SetBoundaryDielectric();
     Box_BottomGraphite->SetBoundaryPotential(fAnodeVoltage); // Anode
     
     rpc_geometry->AddSolid(Box_BottomGraphite,graphite);
