@@ -323,7 +323,6 @@ const std::size_t nx = 50,ny =50,ncont =104;
   // Use microscopic tracking for initial stage of the avalanche.
   AvalancheMicroscopic aval(&sensor);
   //aval.SetRunModeOptions(MPRunMode::GPUExclusive,0);
-  // Set time until which the calculations will be done microscopically.
   const double tMaxWindow = 8;
   aval.SetTimeWindow(0., tMaxWindow);
   
