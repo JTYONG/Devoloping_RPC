@@ -15,7 +15,9 @@ target_link_libraries(AvalMC_addIons Garfield::Garfield OpenMP::OpenMP_CXX)
 # ---Build executable------------------------------------------------------------
 #add_executable(STDdebug STDdebug.C)
 #target_link_libraries(STDdebug Garfield::Garfield OpenMP::OpenMP_CXX)
-
+foreach(_file AvalMC_addIons.C)
+  configure_file(${_file} ../result_cache/${_file} COPYONLY)
+endforeach()
 
 # ---Copy all files locally to the build directory-------------------------------
 foreach(_file c2h2f4_ic4h10_sf6.gas TimingRPCGas.gas)
