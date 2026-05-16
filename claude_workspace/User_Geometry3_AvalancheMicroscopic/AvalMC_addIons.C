@@ -162,7 +162,7 @@ int main(int argc, char *argv[]) {
 
   // Set up the gas (C2H2F4/iC4H10/SF6 90/5/5).
   MediumMagboltz gas;
-  //gas.LoadGasFile("rpc_95.5_4.2_0.3.gas");
+  gas.LoadGasFile("rpc_95.5_4.2_0.3.gas");
   gas.SetComposition("C2H2F4", 95.5, "iC4H10", 4.2, "SF6", 0.3);
   gas.SetTemperature(296.15);
   gas.SetPressure(760.0);
@@ -171,6 +171,7 @@ int main(int argc, char *argv[]) {
   gas.EnablePenningTransfer();
   const std::string path = std::getenv("GARFIELD_INSTALL");
   gas.LoadIonMobility(path+"/share/Garfield/Data/IonMobility_SF6-_SF6.txt");
+  gas.LoadIonMobility(path+"/share/Garfield/Data/IonMobility_C8Hn+_iC4H10.txt");
   gas.Initialise(true);
 
 
@@ -352,6 +353,8 @@ const std::size_t nx = 50,ny =50,ncont =104;
   avalMCi.EnableDiffusion(true);
   //avalMCi.EnableAttachment(true);
   //avalMCi.EnableRecombination(true);
+  const unsigned int nThreads = std::thread::hardware_concurrency();
+  avalMCi.EnableMultithreading(nThreads);
   avalMCi.EnableDebugging(false);
 
   // For negative ions
@@ -366,6 +369,7 @@ const std::size_t nx = 50,ny =50,ncont =104;
   //avalMCin.EnableAttachment(true);
   //avalMCin.EnableRecombination(true);
   avalMCin.EnableDebugging(false);
+  avalMCin.EnableMultithreading(nThreads);
 
   // Start the track in the first gas layer.
   const double dTotal = 2*(fGasGapThickness/2.0 + fAnodeCathodeThickness + fResistiveGlassThickness + fMylarThickness + fStripThickness);
@@ -424,11 +428,11 @@ const std::size_t nx = 50,ny =50,ncont =104;
       xp1 = yp1 = zp1 = tp1 = ep1 = 0.;
       statusPrim = 0;
 
-      aval.AvalancheElectron(electron.x, electron.y, electron.z, electron.t,electron.e, 0., 0., 0.);
-      //avalMCi.AvalancheElectron(electron.x, electron.y, electron.z, electron.t,false,1);
-      avalMCi.DriftIon(electron.x, electron.y, electron.z, electron.t);
-      int ne = 0, ni = 0;
-      aval.GetAvalancheSize(ne, ni);
+      //aval.AvalancheElectron(electron.x, electron.y, electron.z, electron.t,electron.e, 0., 0., 0.);
+      avalMCi.AvalancheElectron(electron.x, electron.y, electron.z, electron.t,true,1);
+      //avalMCi.DriftIon(electron.x, electron.y, electron.z, electron.t);
+      std::size_t ne = 0, ni = 0;
+      avalMCi.GetAvalancheSize(ne, ni);
       std::cout<<"ne: "<<ne<<std::endl;
       std::cout<<"ni: "<<ni<<std::endl;
       OutDebug<<"ne: "<<ne<<"\n";
@@ -439,13 +443,14 @@ const std::size_t nx = 50,ny =50,ncont =104;
       std::cout<<"Accumulated ni: "<<ni<<std::endl;
       OutDebug<<"Accumulated ne: "<<ne<<"\n";
       OutDebug<<"Accumulated ni: "<<ni<<"\n";
-      nElectrons = aval.GetNumberOfElectronEndpoints();
+      //nElectrons = aval.GetNumberOfElectronEndpoints();
       //nElectrons = aval.GetNumberOfElectronEndpointsGPU();
-      std::cout<<"length of <vector> Electron: "<<nElectrons<<std::endl;
-      OutDebug<<"length of <vector> Electron: "<<nElectrons<<"\n";
-      nSecondaries = (nElectrons > 0) ? nElectrons - 1 : 0;
+      //std::cout<<"length of <vector> Electron: "<<nElectrons<<std::endl;
+      //OutDebug<<"length of <vector> Electron: "<<nElectrons<<"\n";
+      //nSecondaries = (nElectrons > 0) ? nElectrons - 1 : 0;
       // ---- Split endpoints into primary (j=0) and secondaries (j>0) ----
-    for (int j = 0; j < nElectrons; ++j) {
+    /*
+     for (int j = 0; j < nElectrons; ++j) {
       double xs, ys, zs, ts, es;
       double xe, ye, ze, te, ee;
       int st;
@@ -488,6 +493,9 @@ const std::size_t nx = 50,ny =50,ncont =104;
 	}
       }
     }
+    */
+     
+     /* 
      double Ltot = 0.;
       if (!aval.GetElectrons().empty()) Ltot += aval.GetElectrons()[0].pathLength;
       Lengthtotal = Ltot;
@@ -502,7 +510,8 @@ const std::size_t nx = 50,ny =50,ncont =104;
           hEta     ->Fill(eta);
           hAlphaEff->Fill(alpha_eff);
         }
-      fieldtree->Fill(); 
+      fieldtree->Fill();
+     */ 
     }
   }
     fieldtree->Write();
@@ -510,7 +519,7 @@ const std::size_t nx = 50,ny =50,ncont =104;
     hEta     ->Write();
     hAlphaEff->Write();
 
-  aval.EnableIonisationMarkers(true);
+  //aval.EnableIonisationMarkers(true);
 
   driftView.SetArea(-15, -0.1, -15, 15, 0.1, 15);
   driftView.SetColourElectrons(kBlue);
