@@ -162,7 +162,7 @@ int main(int argc, char *argv[]) {
 
   // Set up the gas (C2H2F4/iC4H10/SF6 90/5/5).
   MediumMagboltz gas;
-  gas.LoadGasFile("rpc_95.5_4.2_0.3.gas");
+  gas.LoadGasFile("TIFRH_merged_40000_43000.gas");
   gas.SetComposition("C2H2F4", 95.5, "iC4H10", 4.2, "SF6", 0.3);
   gas.SetTemperature(296.15);
   gas.SetPressure(760.0);
