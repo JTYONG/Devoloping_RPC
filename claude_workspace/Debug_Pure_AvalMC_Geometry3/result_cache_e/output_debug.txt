@@ -1,0 +1,164 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 1
+Primary Electron: 1
+ne: 4
+ni: 5
+Accumulated ne: 4
+Accumulated ni: 5
+length of <vector> Electron: 6
+Primary Electron: 2
+ne: 24
+ni: 50
+Accumulated ne: 24
+Accumulated ni: 50
+length of <vector> Electron: 51
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 2
+Primary Electron: 3
+ne: 3
+ni: 3
+Accumulated ne: 3
+Accumulated ni: 3
+length of <vector> Electron: 4
+Primary Electron: 4
+ne: 0
+ni: 0
+Accumulated ne: 0
+Accumulated ni: 0
+length of <vector> Electron: 1
+Primary Electron: 5
+ne: 0
+ni: 0
+Accumulated ne: 0
+Accumulated ni: 0
+length of <vector> Electron: 1
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 3
+Primary Electron: 6
+ne: 20
+ni: 28
+Accumulated ne: 20
+Accumulated ni: 28
+length of <vector> Electron: 29
+Primary Electron: 7
+ne: 0
+ni: 1
+Accumulated ne: 0
+Accumulated ni: 1
+length of <vector> Electron: 2
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 4
+Primary Electron: 8
+ne: 0
+ni: 1
+Accumulated ne: 0
+Accumulated ni: 1
+length of <vector> Electron: 2
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 5
+Primary Electron: 9
+ne: 15
+ni: 18
+Accumulated ne: 15
+Accumulated ni: 18
+length of <vector> Electron: 19
+Primary Electron: 10
+ne: 0
+ni: 0
+Accumulated ne: 0
+Accumulated ni: 0
+length of <vector> Electron: 1
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 6
+Primary Electron: 11
+ne: 0
+ni: 2
+Accumulated ne: 0
+Accumulated ni: 2
+length of <vector> Electron: 3
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 7
+Primary Electron: 12
+ne: 0
+ni: 1
+Accumulated ne: 0
+Accumulated ni: 1
+length of <vector> Electron: 2
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 8
+Primary Electron: 13
+ne: 1
+ni: 1
+Accumulated ne: 1
+Accumulated ni: 1
+length of <vector> Electron: 2
+Primary Electron: 14
+ne: 0
+ni: 0
+Accumulated ne: 0
+Accumulated ni: 0
+length of <vector> Electron: 1
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 9
+Primary Electron: 15
+ne: 0
+ni: 0
+Accumulated ne: 0
+Accumulated ni: 0
+length of <vector> Electron: 1
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 10
+Primary Electron: 16
+ne: 5
+ni: 9
+Accumulated ne: 5
+Accumulated ni: 9
+length of <vector> Electron: 10
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 11
+Primary Electron: 17
+ne: 1
+ni: 2
+Accumulated ne: 1
+Accumulated ni: 2
+length of <vector> Electron: 3
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 12
+Primary Electron: 18
+ne: 0
+ni: 0
+Accumulated ne: 0
+Accumulated ni: 0
+length of <vector> Electron: 1
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 13
+Primary Electron: 19
+ne: 2
+ni: 1
+Accumulated ne: 2
+Accumulated ni: 1
+length of <vector> Electron: 2
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 14
+Primary Electron: 20
+ne: 3
+ni: 3
+Accumulated ne: 3
+Accumulated ni: 3
+length of <vector> Electron: 4
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 15
+Primary Electron: 21
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+length of <vector> Electron: 1
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 16
+Primary Electron: 22
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+length of <vector> Electron: 1
