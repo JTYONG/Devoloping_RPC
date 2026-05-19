@@ -19,17 +19,19 @@ cV.SaveAs('plots/PlotElectronVelocity.png')
 cD = ROOT.TCanvas('cD', '', 600, 600)
 view.SetCanvas(cD)
 view.PlotElectronDiffusion()
+cD.Update()
 cV.SaveAs('plots/PlotElectronDiffusion.png')
-cV.Update()
+
 
 cT = ROOT.TCanvas('cT', '', 600, 600)
 view.SetCanvas(cT)
 view.PlotElectronTownsend()
+cT.Update()
 cV.SaveAs('plots/PlotElectronTownsend.png')
-cV.Update()
 
 cA = ROOT.TCanvas('cA', '', 600, 600)
 view.SetCanvas(cA)
 view.PlotElectronAttachment()
-cV.SaveAs('plots/PlotElectronAttachment.png')
-cV.Update()
+cA.Update()
+cA.SaveAs('plots/PlotElectronAttachment.png')
+
