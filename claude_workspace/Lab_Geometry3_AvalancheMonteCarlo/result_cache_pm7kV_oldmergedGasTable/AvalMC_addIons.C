@@ -193,45 +193,49 @@ int main(int argc, char *argv[]) {
     ComponentNeBem3d *rpc = new ComponentNeBem3d();
 
     // Readout Strips
-    Garfield::SolidBox* Box_TopStrip = new Garfield::SolidBox(0, 0,fStripPosition, fDetectorSizeX/2, fDetectorSizeZ/2,fStripThickness/2);
+    Garfield::SolidBox* Box_TopStrip = new Garfield::SolidBox(0,  fStripPosition ,
+                                                               0, fDetectorSizeX/2,
+                                                               fStripThickness/2, fDetectorSizeZ/2);
     Box_TopStrip->SetLabel("TopReadout");
     Box_TopStrip->SetBoundaryPotential(fReadoutVoltage);
     rpc_geometry->AddSolid(Box_TopStrip,copper);
     const std::string label1 = "TopReadout";
 
-    Garfield::SolidBox* Box_BottomStrip = new Garfield::SolidBox(0,0,- fStripPosition, fDetectorSizeX/2,fDetectorSizeZ/2,fStripThickness/2);
+    Garfield::SolidBox* Box_BottomStrip = new Garfield::SolidBox(0, - fStripPosition,
+                                                               0, fDetectorSizeX/2,
+                                                               fStripThickness/2, fDetectorSizeZ/2);
     Box_BottomStrip->SetLabel("BottomReadout");
     Box_BottomStrip->SetBoundaryPotential(fReadoutVoltage);
     rpc_geometry->AddSolid(Box_BottomStrip,copper);
     const std::string label2 = "BottomReadout";
     // Mylar Layers
-    Garfield::SolidBox* Box_TopMylar = new Garfield::SolidBox(0,0, fMylarPosition
-                                                               , fDetectorSizeX/2
-                                                               , fDetectorSizeZ/2,fMylarThickness/2);
+    Garfield::SolidBox* Box_TopMylar = new Garfield::SolidBox(0, fMylarPosition,
+                                                               0, fDetectorSizeX/2,
+                                                               fMylarThickness/2, fDetectorSizeZ/2);
     Box_TopMylar->SetLabel("TopMylar");
     Box_TopMylar->SetBoundaryDielectric();
     rpc_geometry->AddSolid(Box_TopMylar,mylar);
 
-    Garfield::SolidBox* Box_BottomMylar = new Garfield::SolidBox(0,0, -fMylarPosition,
-                                                                fDetectorSizeX/2, fDetectorSizeZ/2,
-                                                               fMylarThickness/2);
+    Garfield::SolidBox* Box_BottomMylar = new Garfield::SolidBox(0, -fMylarPosition,
+                                                               0, fDetectorSizeX/2,
+                                                               fMylarThickness/2, fDetectorSizeZ/2);
     Box_BottomMylar->SetLabel("BottomMylar");
     Box_BottomMylar->SetBoundaryDielectric();
     rpc_geometry->AddSolid(Box_BottomMylar,mylar);
     
     // Graphite Layers (Anode and Cathode)
-    Garfield::SolidBox* Box_TopGraphite = new Garfield::SolidBox(0,0, fAnodeCathodePosition,
-                                                              fDetectorSizeX/2, fDetectorSizeZ/2,
-                                                               fAnodeCathodeThickness/2);
+    Garfield::SolidBox* Box_TopGraphite = new Garfield::SolidBox(0, fAnodeCathodePosition,
+                                                               0, fDetectorSizeX/2,
+                                                               fAnodeCathodeThickness/2, fDetectorSizeZ/2);
     Box_TopGraphite->SetLabel("TopGraphite");
     Box_TopGraphite->SetBoundaryPotential(fCathodeVoltage); // Cathode
     //Box_TopGraphite->SetBoundaryDielectric();
     rpc_geometry->AddSolid(Box_TopGraphite,graphite);
     const std::string label3 = "TopGraphite";
 
-    Garfield::SolidBox* Box_BottomGraphite = new Garfield::SolidBox(0,0, -fAnodeCathodePosition,
-                                                                fDetectorSizeX/2,fDetectorSizeZ/2,
-                                                               fAnodeCathodeThickness/2);
+    Garfield::SolidBox* Box_BottomGraphite = new Garfield::SolidBox(0, -fAnodeCathodePosition,
+                                                               0, fDetectorSizeX/2,
+                                                               fAnodeCathodeThickness/2, fDetectorSizeZ/2);
     Box_BottomGraphite->SetLabel("BottomGraphite");
     //Box_BottomGraphite->SetBoundaryDielectric();
     Box_BottomGraphite->SetBoundaryPotential(fAnodeVoltage); // Anode
@@ -240,15 +244,15 @@ int main(int argc, char *argv[]) {
     const std::string label4 = "BottomGraphite";
 
     // Resistive Glass Layers
-    Garfield::SolidBox* Box_TopResistiveGlass = new Garfield::SolidBox(0,0,fResistiveGlassPosition,
-                                                              fDetectorSizeX/2, fDetectorSizeZ/2,
-                                                               fResistiveGlassThickness/2);
+    Garfield::SolidBox* Box_TopResistiveGlass = new Garfield::SolidBox(0, fResistiveGlassPosition,
+                                                               0, fDetectorSizeX/2,
+                                                               fResistiveGlassThickness/2, fDetectorSizeZ/2);
     Box_TopResistiveGlass->SetLabel("TopResistiveGlass");
     Box_TopResistiveGlass->SetBoundaryDielectric();
     rpc_geometry->AddSolid(Box_TopResistiveGlass,glass);
-    Garfield::SolidBox* Box_BottomResistiveGlass = new Garfield::SolidBox(0,0,  -fResistiveGlassPosition,
-                                                               fDetectorSizeX/2,
-                                                               fDetectorSizeZ/2,fResistiveGlassThickness/2);
+    Garfield::SolidBox* Box_BottomResistiveGlass = new Garfield::SolidBox(0, -fResistiveGlassPosition,
+                                                               0, fDetectorSizeX/2,
+                                                               fResistiveGlassThickness/2, fDetectorSizeZ/2);
     Box_BottomResistiveGlass->SetLabel("BottomResistiveGlass");
     Box_BottomResistiveGlass->SetBoundaryDielectric();
     rpc_geometry->AddSolid(Box_BottomResistiveGlass,glass);
@@ -256,9 +260,10 @@ int main(int argc, char *argv[]) {
     // Gas Gap
     // Add gas gap volume
     Garfield::SolidBox* Box_GasGap = new Garfield::SolidBox(
-        0,0, fGasGapCenterY,                   // center
+        0, fGasGapCenterY, 0,                  // center
         fDetectorSizeX/2,                      // half-width X
-        fDetectorSizeZ/2,fGasGapThickness/2);
+        fGasGapThickness/2,                    // half-width Y
+        fDetectorSizeZ/2);
     Box_GasGap->SetLabel("GasGap");
     rpc_geometry->AddSolid(Box_GasGap, &gas);           // Use the gas medium
 
@@ -266,7 +271,7 @@ int main(int argc, char *argv[]) {
     rpc->SetNumberOfThreads(16);
     rpc->SetTargetElementSize(0.002); // 0.002 cm = 0.02mm = 20 microns  
     rpc->SetMinMaxNumberOfElements(5, 20);  //
-    rpc->EnableDebugging();
+    rpc->EnableDebugging(false);
     rpc->SetStoreInvMatrix(1);
     //rpc->SetReadInvMatrix(1);
     //rpc->SetReuseModel();
@@ -282,11 +287,11 @@ const std::size_t nx = 50,ny =50,ncont =104;
   contourView = new ViewField();
   contourView->SetCanvas(cContour);
   contourView->SetComponent(rpc);
-  contourView->SetPlane(0,0,-1,0.,0.,0.);
-  contourView->SetArea(-18,-18,-0.1,18,18,0.1);
+  contourView->SetPlane(0,-1,0,0,0.,0);
+  contourView->SetArea(-18,-0.1,-18,18,0.1,18);
   contourView->SetNumberOfContours(104);
   contourView->PlotContour("emag");
-  cContour->SaveAs("../result_cache/png/contouronxy.png");
+  cContour->SaveAs("../result_cache/png/contouronxz.png");
 
   // Create the sensor.
   Sensor sensor(rpc);
@@ -315,8 +320,6 @@ const std::size_t nx = 50,ny =50,ncont =104;
    //Shaper shaper(1,25.,1.,"unipolar");
    //sensor.SetTransferFunction(shaper); 
   
-  const double tMaxWindow = 8;
-   /*
   // Use microscopic tracking for initial stage of the avalanche.
   AvalancheMicroscopic aval(&sensor);
   //aval.SetRunModeOptions(MPRunMode::GPUExclusive,0);
@@ -332,10 +335,12 @@ const std::size_t nx = 50,ny =50,ncont =104;
   aval.EnableNullCollisionSteps();
   //aval.EnableDebugging();
   aval.SetShowProgress(false);
- */
+ 
   // Use a grid-based method for simulating the avalanche growth 
   // after the initial stage.
   //AvalancheGrid avalgrid(&sensor);
+
+
   
   // For ions
   AvalancheMC avalMCi;
@@ -346,11 +351,11 @@ const std::size_t nx = 50,ny =50,ncont =104;
   avalMCi.EnableAvalancheSizeLimit(100000);
   avalMCi.EnableSignalCalculation(true);
   avalMCi.EnableDiffusion(true);
-  avalMCi.EnableAttachment(true);
-  avalMCi.EnableRecombination(true);
+  //avalMCi.EnableAttachment(true);
+  //avalMCi.EnableRecombination(true);
   const unsigned int nThreads = std::thread::hardware_concurrency();
   avalMCi.EnableMultithreading(nThreads);
-  avalMCi.EnableDebugging(true);
+  avalMCi.EnableDebugging(false);
 
   // For negative ions
   AvalancheMC avalMCin;
@@ -361,9 +366,9 @@ const std::size_t nx = 50,ny =50,ncont =104;
   avalMCin.EnableAvalancheSizeLimit(100000);
   avalMCin.EnableSignalCalculation(true);
   avalMCin.EnableDiffusion(true);
-  avalMCin.EnableAttachment(true);
-  avalMCin.EnableRecombination(true);
-  avalMCin.EnableDebugging(true);
+  //avalMCin.EnableAttachment(true);
+  //avalMCin.EnableRecombination(true);
+  avalMCin.EnableDebugging(false);
   avalMCin.EnableMultithreading(nThreads);
 
   // Start the track in the first gas layer.
@@ -385,20 +390,17 @@ const std::size_t nx = 50,ny =50,ncont =104;
   std::clock_t start = std::clock();
 
   TCanvas* cD = new TCanvas("cD","Drift3D",1200,800);
-  TCanvas* cD2DXY = new TCanvas("cD2DXY","Drift2DXY",1200,800);
   TCanvas* cD2DXZ = new TCanvas("cD2DXZ","Drift2DXZ",1200,800);
-
   ViewDrift driftView;
   driftView.SetCanvas(cD);
   driftView.EnableClusterMarkers(true);
-  //aval.EnablePlotting(&driftView, 1000000);
+  aval.EnablePlotting(&driftView, 1000000);
   avalMCi.EnablePlotting(&driftView);
   avalMCin.EnablePlotting(&driftView);
   track.EnablePlotting(&driftView);
- 
-  
+
   // Simulate a charged-particle track.
-  track.NewTrack(0, 0, y0-0.00001, 0, 0, 0,-1);
+  track.NewTrack(0, y0-0.00001, 0, 0, 0, -1, 0);
   // Retrieve the clusters along the track.
   std::size_t nIonMC = 0;
   std::size_t nNegIonMC = 0;
@@ -519,7 +521,7 @@ const std::size_t nx = 50,ny =50,ncont =104;
 
   //aval.EnableIonisationMarkers(true);
 
-  driftView.SetArea(-15, -15, -0.1, 15, 15, 0.1);
+  driftView.SetArea(-15, -0.1, -15, 15, 0.1, 15);
   driftView.SetColourElectrons(kBlue);
   driftView.SetColourIons(kRed);
   driftView.SetColourNegativeIons(kGreen);
@@ -530,19 +532,8 @@ const std::size_t nx = 50,ny =50,ncont =104;
   std::size_t nDriftLine = driftView.GetNumberOfDriftLines();
   std::cout<<"Number of DriftLine: "<<nDriftLine<<std::endl;
   
-  driftView.SetCanvas(cD2DXY);
-  driftView.SetPlaneXY();
-  driftView.SetArea(-15,-15,15,15);
-  driftView.SetColourElectrons(kBlue);
-  driftView.SetColourIons(kRed);
-  driftView.SetColourNegativeIons(kGreen);
-  driftView.Plot2d(true,false);
-  cD2DXY->Update();
-  cD2DXY->Write();
-  cD2DXY->SaveAs("../result_cache/png/DriftPlot2DXY.png");
-  
   driftView.SetCanvas(cD2DXZ);
-  driftView.SetPlaneXY();
+  driftView.SetPlaneXZ();
   driftView.SetArea(-15,-15,15,15);
   driftView.SetColourElectrons(kBlue);
   driftView.SetColourIons(kRed);

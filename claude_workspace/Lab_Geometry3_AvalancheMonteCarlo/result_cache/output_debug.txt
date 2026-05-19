@@ -5,44 +5,50 @@ ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 2
 Primary Electron: 2
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 2
+Cluster: 3
 Primary Electron: 3
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 3
+Cluster: 4
 Primary Electron: 4
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 4
+Cluster: 5
 Primary Electron: 5
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 6
 Primary Electron: 6
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 5
+Cluster: 7
 Primary Electron: 7
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 8
 Primary Electron: 8
 ne: 1
 ni: 0
@@ -68,343 +74,51 @@ ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
-Primary Electron: 13
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 14
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 15
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 16
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 17
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 18
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 19
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 20
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 21
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 22
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 23
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 24
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 25
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 26
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 27
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 28
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 29
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 30
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 6
-Primary Electron: 31
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 32
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 33
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 34
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 35
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 7
-Primary Electron: 36
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 37
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 38
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 39
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 8
-Primary Electron: 40
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Cluster: 9
-Primary Electron: 41
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 42
+Primary Electron: 13
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Cluster: 10
-Primary Electron: 43
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 44
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 45
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 46
+Primary Electron: 14
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Cluster: 11
-Primary Electron: 47
+Primary Electron: 15
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Cluster: 12
-Primary Electron: 48
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 49
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 50
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 51
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 52
+Primary Electron: 16
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Cluster: 13
-Primary Electron: 53
+Primary Electron: 17
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Cluster: 14
-Primary Electron: 54
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 55
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 56
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 57
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 58
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 59
+Primary Electron: 18
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Cluster: 15
-Primary Electron: 60
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 16
-Primary Electron: 61
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 62
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 63
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 17
-Primary Electron: 64
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 65
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 18
-Primary Electron: 66
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 67
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-Primary Electron: 68
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 19
-Primary Electron: 69
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 20
-Primary Electron: 70
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 21
-Primary Electron: 71
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 22
-Primary Electron: 72
-ne: 1
-ni: 0
-Accumulated ne: 1
-Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 23
-Primary Electron: 73
+Primary Electron: 19
 ne: 1
 ni: 0
 Accumulated ne: 1
