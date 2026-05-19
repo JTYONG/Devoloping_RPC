@@ -117,8 +117,8 @@ int main(int argc, char *argv[]) {
   struct ClusterPhoton cluster_photon;
 
   treecluster->Branch("cluster.x",&cluster_x,"cluster.x/D");
-  treecluster->Branch("cluster.y",&cluster_y,"cluster.x/D");
-  treecluster->Branch("cluster.z",&cluster_z,"cluster.x/D");
+  treecluster->Branch("cluster.y",&cluster_y,"cluster.y/D");
+  treecluster->Branch("cluster.z",&cluster_z,"cluster.z/D");
   treecluster->Branch("cluster.t",&cluster_t,"cluster.t/D");
   treecluster->Branch("cluster.energy",&cluster_energy,"cluster.energy/D");
   treecluster->Branch("cluster.extra",&cluster_extra,"cluster.extra/D");
