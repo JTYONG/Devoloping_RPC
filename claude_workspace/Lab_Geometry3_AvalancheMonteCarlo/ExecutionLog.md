@@ -9,5 +9,6 @@
 3. 17 May 2026 (Week6 Sunday)
 - use TIFRH merged 40 -43 kV gas table for AvalancheMC run.
 - Increase biased voltage to +- 7kV.
+-failed, no signal recorded.
 
  

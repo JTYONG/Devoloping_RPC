@@ -25,7 +25,7 @@
 
 int main(int argc, char* argv[]) {
   // ----- Parse ncoll from command line (default = 10) -----
-  int ncoll = 50;
+  int ncoll = 20;
   if (argc > 1) {
     ncoll = std::atoi(argv[1]);
     if (ncoll < 1) {
@@ -83,7 +83,7 @@ int main(int argc, char* argv[]) {
   gas.GenerateGasTable(ncoll, /*verbose=*/true);
 
   // ----- Write the gas file -----
-  const std::string outName = "../gas_files/rpc_95.5_4.2_0.3_40-45.gas";
+  const std::string outName = "../gas_files/rpc_95.5_4.2_0.3_40-45_ncoll=20.gas";
   gas.WriteGasFile(outName);
 
   auto t1 = clk::now();

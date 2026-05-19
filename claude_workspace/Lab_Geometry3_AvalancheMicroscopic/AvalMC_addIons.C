@@ -162,7 +162,7 @@ int main(int argc, char *argv[]) {
 
   // Set up the gas (C2H2F4/iC4H10/SF6 90/5/5).
   MediumMagboltz gas;
-  gas.LoadGasFile("rpc_95.5_4.2_0.3.gas");
+  //gas.LoadGasFile("rpc_95.5_4.2_0.3.gas");
   gas.SetComposition("C2H2F4", 95.5, "iC4H10", 4.2, "SF6", 0.3);
   gas.SetTemperature(296.15);
   gas.SetPressure(760.0);
@@ -480,8 +480,7 @@ const std::size_t nx = 50,ny =50,ncont =104;
         ++nIonMC; // Count number of AvalMC loop for secondary ions
         std::cout<<"# of Sec Cation: "<<nIonMC<<std::endl; 
       }
-      // Drift negative ions (SF6-): electrons that attached to SF6 molecules.
-      // StatusAttached == -7 in Garfield++; verify against your version if needed.
+      // Reattachment by Monte Carlo. StatusAttached == -7 in Garfield++; verify against your version if needed.
       for (const auto& elec : aval.GetElectrons()) { // loop over all electrons (primary and secondary) by AvalancheElectron
         if (elec.status == -7) {
           const auto& pEnd = elec.path.back();
@@ -654,7 +653,6 @@ const std::size_t nx = 50,ny =50,ncont =104;
   std::cout << "Time Bin Size: " << tstep << std::endl;
   std::cout << "Number of Drift Line: " << nDriftLine << std::endl;
 
-  //std::cout<< path+"share/Garfield/Data/IonMobility_SF6-_SF6.txt" <<std::endl;
   LOG("End of Program");
   OutDebug.close();
   //app.Run(true);
