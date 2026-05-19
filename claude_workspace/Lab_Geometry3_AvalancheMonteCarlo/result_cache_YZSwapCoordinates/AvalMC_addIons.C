@@ -53,48 +53,9 @@
 
 using namespace Garfield;
 
-struct ClusterPhoton {
-  int ClusterId;
-  double Photon_x;
-  double Photon_y;
-  double Photon_z;
-  double Photon_t;
-  double Photon_energy;
-  double Photon_dx;
-  double Photon_dy;
-  double Photon_dz;
-};
-
-
-struct ClusterElectron {
-  int ClusterId;
-  double Electron_x;
-  double Electron_y;
-  double Electron_z;
-  double Electron_t;
-  double Electron_energy;
-  double Electron_dx;
-  double Electron_dy;
-  double Electron_dz;
-};
-
-struct ClusterIon {
-  int ClusterId;
-  double Ion_x;
-  double Ion_y;
-  double Ion_z;
-  double Ion_t;
-  double Ion_energy;
-  double Ion_dx;
-  double Ion_dy;
-  double Ion_dz;
-};
-
-
 int main(int argc, char *argv[]) {
   // Creates ROOT Application Environtment
   std::ofstream OutDebug("../result_cache/output_debug.txt");
-  std::ofstream Cluster("../results_cache/data/cluster_data.txt");
   //TApplication app("app", &argc, argv);
   TFile *treefile = new TFile("../result_cache/root_file/aAvalanche.root","recreate");
 
@@ -106,25 +67,6 @@ int main(int argc, char *argv[]) {
   TH1D *eSecondaryEnergy = new TH1D("eSecondaryTree","Micro: Avalanche Secondary Electron Energy Distribution",200,0,50);
   eSecondaryEnergy->GetYaxis()->SetTitle("count");
   eSecondaryEnergy->GetXaxis()->SetTitle("Energy (eV)");
-
-  TFile *clusterfile = new TFile("../result_cache/root_file/cluster_data.root","recreate");
-  TTree *treecluster = new TTree("eClusterTree","Heed Ionisation Cluster Data Tree");
-
- 
-  double cluster_x = 0, cluster_y = 0, cluster_z = 0, cluster_t = 0, cluster_energy = 0, cluster_extra= 0;
-  struct ClusterElectron cluster_electron;
-  struct ClusterIon cluster_ion; 
-  struct ClusterPhoton cluster_photon;
-
-  treecluster->Branch("cluster.x",&cluster_x,"cluster.x/D");
-  treecluster->Branch("cluster.y",&cluster_y,"cluster.x/D");
-  treecluster->Branch("cluster.z",&cluster_z,"cluster.x/D");
-  treecluster->Branch("cluster.t",&cluster_t,"cluster.t/D");
-  treecluster->Branch("cluster.energy",&cluster_energy,"cluster.energy/D");
-  treecluster->Branch("cluster.extra",&cluster_extra,"cluster.extra/D");
-  treecluster->Branch("cluster_electron",&cluster_electron);
-  treecluster->Branch("cluster_electron",&cluster_ion);
-  treecluster->Branch("cluster_electron",&cluster_photon);
 
   int eventID    = 0;
   int nElectrons = 0;  
@@ -205,8 +147,8 @@ int main(int argc, char *argv[]) {
     static constexpr double fHoneyCombThickness = 0;     // cm - honey comb layer thickness         0 mm = 0 cm (Remove Honeycomb)
     static constexpr double fMylarThickness = 0.01;         // cm - mylar layer thickness              100 micron = 0.1 mm = 0.01 cm
     static constexpr double fResistiveGlassThickness = 0.3; // cm - resistive glass layer thickness  3 mm = 0.3 cm
-    static constexpr double fAnodeVoltage = 5000.0;               // V - ANODE at +5kV
-    static constexpr double fCathodeVoltage = -5000.0;            // V - CATHODE at -5V
+    static constexpr double fAnodeVoltage = 7000.0;               // V - ANODE at +7kV
+    static constexpr double fCathodeVoltage = -7000.0;            // V - CATHODE at -7V
     
     static constexpr double fReadoutVoltage = 0;		// grounded potential for readout.
 
@@ -220,7 +162,7 @@ int main(int argc, char *argv[]) {
 
   // Set up the gas (C2H2F4/iC4H10/SF6 90/5/5).
   MediumMagboltz gas;
-  //gas.LoadGasFile("rpc_95.5_4.2_0.3.gas");
+  gas.LoadGasFile("TIFRH_merged_40000_43000.gas");
   gas.SetComposition("C2H2F4", 95.5, "iC4H10", 4.2, "SF6", 0.3);
   gas.SetTemperature(296.15);
   gas.SetPressure(760.0);
@@ -231,6 +173,7 @@ int main(int argc, char *argv[]) {
   gas.LoadIonMobility(path+"/share/Garfield/Data/IonMobility_SF6-_SF6.txt");
   gas.LoadIonMobility(path+"/share/Garfield/Data/IonMobility_C8Hn+_iC4H10.txt");
   gas.Initialise(true);
+
 
   // Materials needed.
     MediumPlastic* glass = new Garfield::MediumPlastic();
@@ -331,7 +274,7 @@ int main(int argc, char *argv[]) {
     rpc->Initialise();
 
 
-const std::size_t nx = 50, ny =50, ncont =104;
+const std::size_t nx = 50,ny =50,ncont =104;
 
   ViewField *contourView = nullptr;
   TCanvas *cContour = nullptr;
@@ -372,6 +315,8 @@ const std::size_t nx = 50, ny =50, ncont =104;
    //Shaper shaper(1,25.,1.,"unipolar");
    //sensor.SetTransferFunction(shaper); 
   
+  const double tMaxWindow = 8;
+   /*
   // Use microscopic tracking for initial stage of the avalanche.
   AvalancheMicroscopic aval(&sensor);
   //aval.SetRunModeOptions(MPRunMode::GPUExclusive,0);
@@ -387,8 +332,10 @@ const std::size_t nx = 50, ny =50, ncont =104;
   aval.EnableNullCollisionSteps();
   //aval.EnableDebugging();
   aval.SetShowProgress(false);
-  aval.EnableMultithreading(16,true);
- 
+ */
+  // Use a grid-based method for simulating the avalanche growth 
+  // after the initial stage.
+  //AvalancheGrid avalgrid(&sensor);
   
   // For ions
   AvalancheMC avalMCi;
@@ -399,11 +346,11 @@ const std::size_t nx = 50, ny =50, ncont =104;
   avalMCi.EnableAvalancheSizeLimit(100000);
   avalMCi.EnableSignalCalculation(true);
   avalMCi.EnableDiffusion(true);
-  //avalMCi.EnableAttachment(true);
-  //avalMCi.EnableRecombination(true);
+  avalMCi.EnableAttachment(true);
+  avalMCi.EnableRecombination(true);
   const unsigned int nThreads = std::thread::hardware_concurrency();
   avalMCi.EnableMultithreading(nThreads);
-  avalMCi.EnableDebugging(false);
+  avalMCi.EnableDebugging(true);
 
   // For negative ions
   AvalancheMC avalMCin;
@@ -414,9 +361,9 @@ const std::size_t nx = 50, ny =50, ncont =104;
   avalMCin.EnableAvalancheSizeLimit(100000);
   avalMCin.EnableSignalCalculation(true);
   avalMCin.EnableDiffusion(true);
-  //avalMCin.EnableAttachment(true);
-  //avalMCin.EnableRecombination(true);
-  avalMCin.EnableDebugging(false);
+  avalMCin.EnableAttachment(true);
+  avalMCin.EnableRecombination(true);
+  avalMCin.EnableDebugging(true);
   avalMCin.EnableMultithreading(nThreads);
 
   // Start the track in the first gas layer.
@@ -440,24 +387,16 @@ const std::size_t nx = 50, ny =50, ncont =104;
   TCanvas* cD = new TCanvas("cD","Drift3D",1200,800);
   TCanvas* cD2DXY = new TCanvas("cD2DXY","Drift2DXY",1200,800);
   TCanvas* cD2DXZ = new TCanvas("cD2DXZ","Drift2DXZ",1200,800);
+
   ViewDrift driftView;
   driftView.SetCanvas(cD);
   driftView.EnableClusterMarkers(true);
-  aval.EnablePlotting(&driftView, 1000000);
+  //aval.EnablePlotting(&driftView, 1000000);
   avalMCi.EnablePlotting(&driftView);
   avalMCin.EnablePlotting(&driftView);
   track.EnablePlotting(&driftView);
+ 
   
-  treecluster->Branch("cluster.x",&cluster_x,"cluster.x/D");
-  treecluster->Branch("cluster.y",&cluster_y,"cluster.x/D");
-  treecluster->Branch("cluster.z",&cluster_z,"cluster.x/D");
-  treecluster->Branch("cluster.t",&cluster_t,"cluster.t/D");
-  treecluster->Branch("cluster.energy",&cluster_energy,"cluster.energy/D");
-  treecluster->Branch("cluster.extra",&cluster_extra,"cluster.extra/D");
-  treecluster->Branch("cluster.electron",&cluster_electron);
-  treecluster->Branch("cluster.electron",&cluster_ion);
-  treecluster->Branch("cluster.electron",&cluster_photon);
-
   // Simulate a charged-particle track.
   track.NewTrack(0, 0, y0-0.00001, 0, 0, 0,-1);
   // Retrieve the clusters along the track.
@@ -474,49 +413,7 @@ const std::size_t nx = 50, ny =50, ncont =104;
     std::cout<<"Cluster: "<<nCluster<<std::endl;
     OutDebug<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"<<"\n";
     OutDebug<<"Cluster: "<<nCluster<<"\n";
-    cluster_x = cluster.x;
-    cluster_y = cluster.y;
-    cluster_z = cluster.z;
-    cluster_t = cluster.t;
-    cluster_energy = cluster.energy;
-    cluster_extra = cluster.extra;
-    treecluster->Fill();
-    int clusterID = 0;
-    for (const auto &ion :cluster.ions){
-      clusterID = nCluster;
-      cluster_ion.Ion_x = ion.x;
-      cluster_ion.Ion_y = ion.y;
-      cluster_ion.Ion_z = ion.z;
-      cluster_ion.Ion_t = ion.t;
-      cluster_ion.Ion_energy = ion.e;
-      cluster_ion.Ion_dx = ion.dx;
-      cluster_ion.Ion_dx = ion.dy;
-      cluster_ion.Ion_dy = ion.dz;
-      treecluster->Fill();
-    }
-    for (const auto &photon :cluster.photons){
-      clusterID = nCluster;
-      cluster_photon.Photon_x = photon.x;
-      cluster_photon.Photon_y = photon.y;
-      cluster_photon.Photon_z = photon.z;
-      cluster_photon.Photon_t = photon.t;
-      cluster_photon.Photon_energy = photon.e;
-      cluster_photon.Photon_dx = photon.dx;
-      cluster_photon.Photon_dx = photon.dy;
-      cluster_photon.Photon_dy = photon.dz;
-      treecluster->Fill();
-    }
     for (const auto &electron : cluster.electrons) {
-      clusterID = nCluster;
-      cluster_electron.Electron_x = electron.x;
-      cluster_electron.Electron_y = electron.y;
-      cluster_electron.Electron_z = electron.z;
-      cluster_electron.Electron_t = electron.t;
-      cluster_electron.Electron_energy = electron.e;
-      cluster_electron.Electron_dx = electron.dx;
-      cluster_electron.Electron_dx = electron.dy;
-      cluster_electron.Electron_dy = electron.dz;
-      treecluster->Fill();
       //Set Tree Variables, clear value each cluster.
       ++nEMicro; // number of cluster loops
       std::cout<<"Primary Electron: "<<nEMicro<<std::endl;
@@ -529,13 +426,11 @@ const std::size_t nx = 50, ny =50, ncont =104;
       xp1 = yp1 = zp1 = tp1 = ep1 = 0.;
       statusPrim = 0;
 
-      aval.AvalancheElectron(electron.x, electron.y, electron.z, electron.t,electron.e, 0., 0., 0.);
-      //avalMCi.AvalancheElectron(electron.x, electron.y, electron.z, electron.t,true,1);
-      avalMCi.DriftIon(electron.x, electron.y, electron.z, electron.t);
-      //std::size_t ne = 0, ni = 0;
-      //avalMCi.GetAvalancheSize(ne, ni);
-      int ne=0,ni=0;
-      aval.GetAvalancheSize(ne,ni);
+      //aval.AvalancheElectron(electron.x, electron.y, electron.z, electron.t,electron.e, 0., 0., 0.);
+      avalMCi.AvalancheElectron(electron.x, electron.y, electron.z, electron.t,true,1);
+      //avalMCi.DriftIon(electron.x, electron.y, electron.z, electron.t);
+      std::size_t ne = 0, ni = 0;
+      avalMCi.GetAvalancheSize(ne, ni);
       std::cout<<"ne: "<<ne<<std::endl;
       std::cout<<"ni: "<<ni<<std::endl;
       OutDebug<<"ne: "<<ne<<"\n";
@@ -546,13 +441,13 @@ const std::size_t nx = 50, ny =50, ncont =104;
       std::cout<<"Accumulated ni: "<<ni<<std::endl;
       OutDebug<<"Accumulated ne: "<<ne<<"\n";
       OutDebug<<"Accumulated ni: "<<ni<<"\n";
-      nElectrons = aval.GetNumberOfElectronEndpoints();
-      nElectrons = aval.GetNumberOfElectronEndpointsGPU();
-      std::cout<<"length of <vector> Electron: "<<nElectrons<<std::endl;
-      OutDebug<<"length of <vector> Electron: "<<nElectrons<<"\n";
-      nSecondaries = (nElectrons > 0) ? nElectrons - 1 : 0;
+      //nElectrons = aval.GetNumberOfElectronEndpoints();
+      //nElectrons = aval.GetNumberOfElectronEndpointsGPU();
+      //std::cout<<"length of <vector> Electron: "<<nElectrons<<std::endl;
+      //OutDebug<<"length of <vector> Electron: "<<nElectrons<<"\n";
+      //nSecondaries = (nElectrons > 0) ? nElectrons - 1 : 0;
       // ---- Split endpoints into primary (j=0) and secondaries (j>0) ----
-    
+    /*
      for (int j = 0; j < nElectrons; ++j) {
       double xs, ys, zs, ts, es;
       double xe, ye, ze, te, ee;
@@ -585,7 +480,8 @@ const std::size_t nx = 50, ny =50, ncont =104;
         ++nIonMC; // Count number of AvalMC loop for secondary ions
         std::cout<<"# of Sec Cation: "<<nIonMC<<std::endl; 
       }
-      // Reattachment by Monte Carlo. StatusAttached == -7 in Garfield++; verify against your version if needed.
+      // Drift negative ions (SF6-): electrons that attached to SF6 molecules.
+      // StatusAttached == -7 in Garfield++; verify against your version if needed.
       for (const auto& elec : aval.GetElectrons()) { // loop over all electrons (primary and secondary) by AvalancheElectron
         if (elec.status == -7) {
           const auto& pEnd = elec.path.back();
@@ -595,14 +491,14 @@ const std::size_t nx = 50, ny =50, ncont =104;
 	}
       }
     }
-    
+    */
      
-      
+     /* 
      double Ltot = 0.;
       if (!aval.GetElectrons().empty()) Ltot += aval.GetElectrons()[0].pathLength;
       Lengthtotal = Ltot;
-      const double alpha     = (Ltot > 0.) ? double(ni)      / Ltot : 888.;
-      const double eta       = (Ltot > 0.) ? double(nNegIonMC) / Ltot : 888.;
+      const double alpha     = (Ltot > 0.) ? double(ni)      / Ltot : 0.;
+      const double eta       = (Ltot > 0.) ? double(nNegIonMC) / Ltot : 0.;
       const double alpha_eff = alpha - eta;
       bAlpha    = alpha;
       bEta      = eta;
@@ -612,7 +508,8 @@ const std::size_t nx = 50, ny =50, ncont =104;
           hEta     ->Fill(eta);
           hAlphaEff->Fill(alpha_eff);
         }
-      fieldtree->Fill(); 
+      fieldtree->Fill();
+     */ 
     }
   }
     fieldtree->Write();
@@ -620,12 +517,9 @@ const std::size_t nx = 50, ny =50, ncont =104;
     hEta     ->Write();
     hAlphaEff->Write();
 
- clusterfile->cd();
-  clusterfile->Write();
-  clusterfile->Close();
-  aval.EnableIonisationMarkers(true);
+  //aval.EnableIonisationMarkers(true);
 
-  driftView.SetArea(-15, -0.1, -15, 15, 0.1, 15);
+  driftView.SetArea(-15, -15, -0.1, 15, 15, 0.1);
   driftView.SetColourElectrons(kBlue);
   driftView.SetColourIons(kRed);
   driftView.SetColourNegativeIons(kGreen);
@@ -636,8 +530,19 @@ const std::size_t nx = 50, ny =50, ncont =104;
   std::size_t nDriftLine = driftView.GetNumberOfDriftLines();
   std::cout<<"Number of DriftLine: "<<nDriftLine<<std::endl;
   
+  driftView.SetCanvas(cD2DXY);
+  driftView.SetPlaneXY();
+  driftView.SetArea(-15,-15,15,15);
+  driftView.SetColourElectrons(kBlue);
+  driftView.SetColourIons(kRed);
+  driftView.SetColourNegativeIons(kGreen);
+  driftView.Plot2d(true,false);
+  cD2DXY->Update();
+  cD2DXY->Write();
+  cD2DXY->SaveAs("../result_cache/png/DriftPlot2DXY.png");
+  
   driftView.SetCanvas(cD2DXZ);
-  driftView.SetPlaneXZ();
+  driftView.SetPlaneXY();
   driftView.SetArea(-15,-15,15,15);
   driftView.SetColourElectrons(kBlue);
   driftView.SetColourIons(kRed);
@@ -738,18 +643,6 @@ const std::size_t nx = 50, ny =50, ncont =104;
     //sensor.ExportSignal(label, "Charge");
     //gSystem->ProcessEvents();    
   
-  OutDebug<< "++++ Aval Microscopic ++++"<< std::endl;
-  OutDebug << "Number of Electron (Avalanche):  " << neMicroAval << std::endl;
-  OutDebug<< "Number of Ion (Avalanche):  " << nIMicroAval << std::endl;
-  OutDebug<< std::endl;
-  OutDebug<< "++++ Aval MC ++++"<< std::endl;
-  OutDebug<< "Number of Positive Ion Drifts:  " << nIonMC << std::endl;
-  OutDebug<< "Number of Negative Ion Drifts:  " << nNegIonMC << std::endl;
-  OutDebug << "Number of Cluster: " << nEMicro << std::endl;
-  OutDebug<< "Time Bin Size: " << tstep << std::endl;
-  OutDebug << "Number of Drift Line: " << nDriftLine << std::endl;
-
-
   std::cout << "++++ Aval Microscopic ++++"<< std::endl;
   std::cout << "Number of Electron (Avalanche):  " << neMicroAval << std::endl;
   std::cout << "Number of Ion (Avalanche):  " << nIMicroAval << std::endl;
@@ -761,6 +654,7 @@ const std::size_t nx = 50, ny =50, ncont =104;
   std::cout << "Time Bin Size: " << tstep << std::endl;
   std::cout << "Number of Drift Line: " << nDriftLine << std::endl;
 
+  //std::cout<< path+"share/Garfield/Data/IonMobility_SF6-_SF6.txt" <<std::endl;
   LOG("End of Program");
   OutDebug.close();
   //app.Run(true);

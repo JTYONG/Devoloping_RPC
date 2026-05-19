@@ -53,6 +53,44 @@
 
 using namespace Garfield;
 
+struct ClusterPhoton {
+  int ClusterId;
+  double Photon_x;
+  double Photon_y;
+  double Photon_z;
+  double Photon_t;
+  double Photon_energy;
+  double Photon_dx;
+  double Photon_dy;
+  double Photon_dz;
+};
+
+
+struct ClusterElectron {
+  int ClusterId;
+  double Electron_x;
+  double Electron_y;
+  double Electron_z;
+  double Electron_t;
+  double Electron_energy;
+  double Electron_dx;
+  double Electron_dy;
+  double Electron_dz;
+};
+
+struct ClusterIon {
+  int ClusterId;
+  double Ion_x;
+  double Ion_y;
+  double Ion_z;
+  double Ion_t;
+  double Ion_energy;
+  double Ion_dx;
+  double Ion_dy;
+  double Ion_dz;
+};
+
+
 int main(int argc, char *argv[]) {
   // Creates ROOT Application Environtment
   std::ofstream OutDebug("../result_cache/output_debug.txt");
@@ -67,6 +105,24 @@ int main(int argc, char *argv[]) {
   TH1D *eSecondaryEnergy = new TH1D("eSecondaryTree","Micro: Avalanche Secondary Electron Energy Distribution",200,0,50);
   eSecondaryEnergy->GetYaxis()->SetTitle("count");
   eSecondaryEnergy->GetXaxis()->SetTitle("Energy (eV)");
+
+  TFile *clusterfile = new TFile("../result_cache/root_file/cluster_data.root","recreate");
+  TTree *treecluster = new TTree("eClusterTree","Heed Ionisation Cluster Data Tree");
+
+  double cluster_x = 0, cluster_y = 0, cluster_z = 0, cluster_t = 0, cluster_energy = 0, cluster_extra= 0;
+  struct ClusterElectron cluster_electron;
+  struct ClusterIon cluster_ion; 
+  struct ClusterPhoton cluster_photon;
+
+  treecluster->Branch("cluster.x",&cluster_x,"cluster.x/D");
+  treecluster->Branch("cluster.y",&cluster_y,"cluster.x/D");
+  treecluster->Branch("cluster.z",&cluster_z,"cluster.x/D");
+  treecluster->Branch("cluster.t",&cluster_t,"cluster.t/D");
+  treecluster->Branch("cluster.energy",&cluster_energy,"cluster.energy/D");
+  treecluster->Branch("cluster.extra",&cluster_extra,"cluster.extra/D");
+  treecluster->Branch("cluster_electron",&cluster_electron);
+  treecluster->Branch("cluster_electron",&cluster_ion);
+  treecluster->Branch("cluster_electron",&cluster_photon);
 
   int eventID    = 0;
   int nElectrons = 0;  
@@ -398,7 +454,7 @@ const std::size_t nx = 50,ny =50,ncont =104;
  
   
   // Simulate a charged-particle track.
-  track.NewTrack(0, 0, y0-0.00001, 0, 0, 0,-1);
+track.NewTrack(0, 0, y0-0.00001, 0, 0, 0,-1);
   // Retrieve the clusters along the track.
   std::size_t nIonMC = 0;
   std::size_t nNegIonMC = 0;
@@ -413,6 +469,50 @@ const std::size_t nx = 50,ny =50,ncont =104;
     std::cout<<"Cluster: "<<nCluster<<std::endl;
     OutDebug<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"<<"\n";
     OutDebug<<"Cluster: "<<nCluster<<"\n";
+    cluster_x = cluster.x;
+    cluster_y = cluster.y;
+    cluster_z = cluster.z;
+    cluster_t = cluster.t;
+    cluster_energy = cluster.energy;
+    cluster_extra = cluster.extra;
+    treecluster->Fill();
+    int clusterID = 0;
+    for (const auto &ion :cluster.ions){
+      clusterID = nCluster;
+      cluster_ion.Ion_x = ion.x;
+      cluster_ion.Ion_y = ion.y;
+      cluster_ion.Ion_z = ion.z;
+      cluster_ion.Ion_t = ion.t;
+      cluster_ion.Ion_energy = ion.e;
+      cluster_ion.Ion_dx = ion.dx;
+      cluster_ion.Ion_dx = ion.dy;
+      cluster_ion.Ion_dy = ion.dz;
+      treecluster->Fill();
+    }
+    for (const auto &photon :cluster.photons){
+      clusterID = nCluster;
+      cluster_photon.Photon_x = photon.x;
+      cluster_photon.Photon_y = photon.y;
+      cluster_photon.Photon_z = photon.z;
+      cluster_photon.Photon_t = photon.t;
+      cluster_photon.Photon_energy = photon.e;
+      cluster_photon.Photon_dx = photon.dx;
+      cluster_photon.Photon_dx = photon.dy;
+      cluster_photon.Photon_dy = photon.dz;
+      treecluster->Fill();
+    }
+    for (const auto &electron : cluster.electrons) {
+      clusterID = nCluster;
+      cluster_electron.Electron_x = electron.x;
+      cluster_electron.Electron_y = electron.y;
+      cluster_electron.Electron_z = electron.z;
+      cluster_electron.Electron_t = electron.t;
+      cluster_electron.Electron_energy = electron.e;
+      cluster_electron.Electron_dx = electron.dx;
+      cluster_electron.Electron_dx = electron.dy;
+      cluster_electron.Electron_dy = electron.dz;
+      treecluster->Fill();
+    }
     for (const auto &electron : cluster.electrons) {
       //Set Tree Variables, clear value each cluster.
       ++nEMicro; // number of cluster loops
@@ -518,6 +618,10 @@ const std::size_t nx = 50,ny =50,ncont =104;
     hAlphaEff->Write();
 
   //aval.EnableIonisationMarkers(true);
+  
+  clusterfile->cd();
+  clusterfile->Write();
+  clusterfile->Close();
 
   driftView.SetArea(-15, -15, -0.1, 15, 15, 0.1);
   driftView.SetColourElectrons(kBlue);
