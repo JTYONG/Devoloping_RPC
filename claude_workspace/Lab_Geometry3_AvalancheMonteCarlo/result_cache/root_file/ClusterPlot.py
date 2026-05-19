@@ -58,7 +58,7 @@ except ImportError:  # pragma: no cover
 
 ROOT_FILE = Path("cluster_data.root")
 TREE_NAME = "eClusterTree"
-OUT_DIR = Path("../png")
+OUT_DIR = Path("./png")
 
 # Histogram binning
 ENERGY_BINS = 100
@@ -224,6 +224,7 @@ def main():
         cl_x = read_array(tree, "cluster.x", "cluster_x")
         cl_y = read_array(tree, "cluster.y", "cluster_y", "cluster.x_1")
         cl_z = read_array(tree, "cluster.z", "cluster_z", "cluster.x_2")
+        cl_t = read_array(tree, "cluster.t", "cluster_t")
         cl_e = read_array(tree, "cluster.energy", "cluster_energy")
 
         # If y/z fell back to the same buffer as x (because of the leaflist
@@ -265,6 +266,14 @@ def main():
     # Drop the "all-zero placeholder" rows that come from the producer's
     # pattern of filling the tree inside every inner loop.
     cl_e_f, cl_x_f, cl_y_f, cl_z_f = safe_filter(cl_e, cl_x, cl_y, cl_z)
+    # Time is filtered on its own — use energy as the "is this a real
+    # cluster row" companion so that t == 0 entries are kept only when
+    # they coincide with a non-zero energy (which would be a genuine
+    # zero-time cluster, e.g. the primary at t=0).
+    if len(cl_t) and len(cl_e):
+        cl_t_f, _ = safe_filter(cl_t, cl_e)
+    else:
+        cl_t_f = cl_t
     e_e_f, e_x_f, e_y_f, e_z_f = safe_filter(e_e, e_x, e_y, e_z)
     i_e_f, i_x_f, i_y_f, i_z_f = safe_filter(i_e, i_x, i_y, i_z)
     p_e_f, p_x_f, p_y_f, p_z_f = safe_filter(p_e, p_x, p_y, p_z)
@@ -281,6 +290,14 @@ def main():
                 "Energy (eV)", "energy_ion.png", color="indianred")
     save_hist1d(p_e_f, "Photon Energy Distribution",
                 "Energy (eV)", "energy_photon.png", color="darkorange")
+
+    # ------------------------------------------------------------------ #
+    # Cluster time distribution                                          #
+    # ------------------------------------------------------------------ #
+    print("\nGenerating cluster time distribution ...")
+    save_hist1d(cl_t_f, "Cluster Time Distribution",
+                "Time (ns)", "time_cluster.png",
+                bins=ENERGY_BINS, color="slateblue")
 
     # ------------------------------------------------------------------ #
     # 2D XY distributions                                                #
