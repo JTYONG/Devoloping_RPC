@@ -109,7 +109,6 @@ int main(int argc, char *argv[]) {
 
   TFile *clusterfile = new TFile("../result_cache/root_file/cluster_data.root","recreate");
   TTree *treecluster = new TTree("eClusterTree","Heed Ionisation Cluster Data Tree");
-
  
   double cluster_x = 0, cluster_y = 0, cluster_z = 0, cluster_t = 0, cluster_energy = 0, cluster_extra= 0;
   struct ClusterElectron cluster_electron;
