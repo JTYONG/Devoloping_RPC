@@ -5,7 +5,7 @@ ROOT.gSystem.Load("libGarfield")
 from ROOT import Garfield
 
 gas = Garfield.MediumMagboltz()
-gas.LoadGasFile("rpc_95.5_4.2_0.3_40-45_ncoll=20.gas")
+gas.LoadGasFile("rpc_95.5_4.2_0.3.gas")
 
 import ctypes
 ef, bf, ba = ROOT.std.vector('double')(), ROOT.std.vector('double')(), ROOT.std.vector('double')()
@@ -100,6 +100,6 @@ ax[1,1].set_xlabel(r"Efield [V/cm]")
 ax[1,1].set_ylabel(r"%$D_T$ $[\sqrt{cm}]$")
 
 fig.tight_layout()
-fig.savefig("transport coefficients.png")
+fig.savefig("38 -39 kV transport coefficients.png")
 
 
