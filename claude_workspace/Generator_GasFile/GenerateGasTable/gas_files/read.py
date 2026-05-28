@@ -3,7 +3,7 @@ import Garfield
 
 # Set up the gas.
 gas = ROOT.Garfield.MediumMagboltz()
-gas.LoadGasFile('rpc_95.5_4.2_0.3.gas')
+gas.LoadGasFile('rpc_95.5_4.2_0.3_40-45_ncoll=20.gas')
 #gas.LoadIonMobility('IonMobility_Ar+_Ar.txt')
 gas.PrintGas()
 
