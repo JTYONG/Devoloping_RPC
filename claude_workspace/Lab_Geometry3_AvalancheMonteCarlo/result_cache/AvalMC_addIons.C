@@ -120,9 +120,10 @@ int main(int argc, char *argv[]) {
   treecluster->Branch("cluster.t",&cluster_t,"cluster.t/D");
   treecluster->Branch("cluster.energy",&cluster_energy,"cluster.energy/D");
   treecluster->Branch("cluster.extra",&cluster_extra,"cluster.extra/D");
-  treecluster->Branch("cluster_electron",&cluster_electron);
-  treecluster->Branch("cluster_electron",&cluster_ion);
-  treecluster->Branch("cluster_electron",&cluster_photon);
+  treecluster->Branch("cluster_electron", &cluster_electron,  "ClusterId/I:Electron_x/D:Electron_y/D:Electron_z/D:Electron_t/D:Electron_energy/D:Electron_dx/D:Electron_dy/D:Electron_dz/D");
+  treecluster->Branch("cluster_ion", &cluster_ion,"ClusterId/I:Ion_x/D:Ion_y/D:Ion_z/D:Ion_t/D:""Ion_energy/D:Ion_dx/D:Ion_dy/D:Ion_dz/D");
+  treecluster->Branch("cluster_photon", &cluster_photon,"ClusterId/I:Photon_x/D:Photon_y/D:Photon_z/D:Photon_t/D:""Photon_energy/D:Photon_dx/D:Photon_dy/D:Photon_dz/D");
+
 
   int eventID    = 0;
   int nElectrons = 0;  

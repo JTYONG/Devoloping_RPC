@@ -5,69 +5,53 @@ ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 2
 Primary Electron: 2
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 3
 Primary Electron: 3
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 4
 Primary Electron: 4
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 2
 Primary Electron: 5
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 5
 Primary Electron: 6
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 6
 Primary Electron: 7
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 7
 Primary Electron: 8
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 8
 Primary Electron: 9
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 9
 Primary Electron: 10
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 10
 Primary Electron: 11
 ne: 1
 ni: 0
@@ -83,56 +67,1463 @@ ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 11
 Primary Electron: 14
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 12
 Primary Electron: 15
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 13
 Primary Electron: 16
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 14
 Primary Electron: 17
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 15
 Primary Electron: 18
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 16
 Primary Electron: 19
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Cluster: 17
 Primary Electron: 20
 ne: 1
 ni: 0
 Accumulated ne: 1
 Accumulated ni: 0
 Primary Electron: 21
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 22
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 23
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 24
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 25
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 26
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 27
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 28
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 29
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 30
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 31
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 32
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 33
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 34
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 35
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 36
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 37
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 38
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 39
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 40
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 41
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 42
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 43
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 44
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 45
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 46
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 47
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 48
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 49
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 50
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 51
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 52
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 53
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 54
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 55
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 56
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 57
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 58
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 59
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 60
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 61
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 62
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 63
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 64
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 65
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 66
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 67
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 68
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 69
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 70
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 71
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 72
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 73
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 74
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 75
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 76
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 77
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 78
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 79
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 80
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 81
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 82
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 83
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 84
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 85
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 86
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 87
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 88
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 89
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 90
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 91
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 92
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 93
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 94
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 95
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 96
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 97
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 98
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 99
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 100
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 101
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 102
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 103
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 104
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 105
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 106
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 107
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 108
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 109
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 110
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 111
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 112
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 113
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 114
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 115
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 116
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 117
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 118
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 119
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 120
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 121
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 122
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 123
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 124
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 125
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 126
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 127
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 128
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 129
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 130
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 131
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 132
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 133
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 134
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 135
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 136
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 137
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 138
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 139
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 140
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 141
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 142
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 143
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 144
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 145
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 146
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 147
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 148
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 149
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 150
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 151
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 152
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 153
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 154
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 155
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 156
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 157
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 158
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 159
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 160
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 161
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 162
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 163
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 164
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 165
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 166
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 167
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 168
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 169
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 170
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 171
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 172
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 173
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 174
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 175
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 176
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 177
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 178
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 179
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 180
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 181
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 182
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 183
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 184
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 185
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 186
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 187
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 188
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 189
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 190
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 191
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 192
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 193
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 194
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 195
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 196
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 197
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 198
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 199
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 200
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 201
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 202
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 203
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 204
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 205
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 206
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 207
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 208
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 209
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 210
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 211
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 212
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 213
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 214
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 215
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 216
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 217
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 218
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 219
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 220
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 221
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 222
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 223
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 224
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 225
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 226
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 227
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 228
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 229
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 230
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 231
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 232
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 233
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 234
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 235
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 236
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 237
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 238
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 239
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 240
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 241
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 242
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 243
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 244
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 245
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 246
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 247
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 248
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 249
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 250
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 251
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 252
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 253
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 254
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 255
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 256
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 257
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 258
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 259
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 260
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 261
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 262
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 263
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 264
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 265
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 266
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 267
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 268
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 269
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 270
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 271
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 3
+Primary Electron: 272
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 273
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 4
+Primary Electron: 274
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 5
+Primary Electron: 275
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 276
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 6
+Primary Electron: 277
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 7
+Primary Electron: 278
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 8
+Primary Electron: 279
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 280
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 9
+Primary Electron: 281
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 10
+Primary Electron: 282
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 11
+Primary Electron: 283
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 12
+Primary Electron: 284
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 13
+Primary Electron: 285
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 14
+Primary Electron: 286
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 15
+Primary Electron: 287
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 288
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 289
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 16
+Primary Electron: 290
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 291
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 17
+Primary Electron: 292
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 18
+Primary Electron: 293
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 19
+Primary Electron: 294
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Cluster: 20
+Primary Electron: 295
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 296
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 297
+ne: 1
+ni: 0
+Accumulated ne: 1
+Accumulated ni: 0
+Primary Electron: 298
 ne: 1
 ni: 0
 Accumulated ne: 1

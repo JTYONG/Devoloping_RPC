@@ -120,9 +120,10 @@ int main(int argc, char *argv[]) {
   treecluster->Branch("cluster.t",&cluster_t,"cluster.t/D");
   treecluster->Branch("cluster.energy",&cluster_energy,"cluster.energy/D");
   treecluster->Branch("cluster.extra",&cluster_extra,"cluster.extra/D");
-  treecluster->Branch("cluster_electron",&cluster_electron);
-  treecluster->Branch("cluster_electron",&cluster_ion);
-  treecluster->Branch("cluster_electron",&cluster_photon);
+  treecluster->Branch("cluster_electron", &cluster_electron,  "ClusterId/I:Electron_x/D:Electron_y/D:Electron_z/D:Electron_t/D:Electron_energy/D:Electron_dx/D:Electron_dy/D:Electron_dz/D");
+  treecluster->Branch("cluster_ion", &cluster_ion,"ClusterId/I:Ion_x/D:Ion_y/D:Ion_z/D:Ion_t/D:""Ion_energy/D:Ion_dx/D:Ion_dy/D:Ion_dz/D");
+  treecluster->Branch("cluster_photon", &cluster_photon,"ClusterId/I:Photon_x/D:Photon_y/D:Photon_z/D:Photon_t/D:""Photon_energy/D:Photon_dx/D:Photon_dy/D:Photon_dz/D");
+
 
   int eventID    = 0;
   int nElectrons = 0;  
@@ -631,7 +632,6 @@ track.NewTrack(0, 0, y0-0.00001, 0, 0, 0,-1);
   driftView.SetColourNegativeIons(kGreen);
   driftView.Plot3d(true,false,false);
   cD->Update();
-  cD->Write();
   cD->SaveAs("../result_cache/png/DriftPlot3D.png");
   std::size_t nDriftLine = driftView.GetNumberOfDriftLines();
   std::cout<<"Number of DriftLine: "<<nDriftLine<<std::endl;
@@ -644,7 +644,6 @@ track.NewTrack(0, 0, y0-0.00001, 0, 0, 0,-1);
   driftView.SetColourNegativeIons(kGreen);
   driftView.Plot2d(true,false);
   cD2DXY->Update();
-  cD2DXY->Write();
   cD2DXY->SaveAs("../result_cache/png/DriftPlot2DXY.png");
   
   driftView.SetCanvas(cD2DXZ);
@@ -655,7 +654,6 @@ track.NewTrack(0, 0, y0-0.00001, 0, 0, 0,-1);
   driftView.SetColourNegativeIons(kGreen);
   driftView.Plot2d(true,false);
   cD2DXZ->Update();
-  cD2DXZ->Write();
   cD2DXZ->SaveAs("../result_cache/png/DriftPlot2DXZ.png");
 
   if (plotSignal) {
@@ -665,6 +663,9 @@ track.NewTrack(0, 0, y0-0.00001, 0, 0, 0,-1);
     sensor.ExportSignal(label3, "../result_cache/sensor_out/Signal_"+label3);
     sensor.ExportSignal(label4, "../result_cache/sensor_out/Signal_"+label4);
   treefile->cd();  
+  cD->Write();         
+  cD2DXY->Write();
+  cD2DXZ->Write();
   treefile->Write();
   treefile->Close();
   }
