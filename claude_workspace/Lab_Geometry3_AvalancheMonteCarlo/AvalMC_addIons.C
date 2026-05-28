@@ -204,9 +204,9 @@ int main(int argc, char *argv[]) {
     static constexpr double fMylarThickness = 0.01;         // cm - mylar layer thickness              100 micron = 0.1 mm = 0.01 cm
     static constexpr double fResistiveGlassThickness = 0.3; // cm - resistive glass layer thickness  3 mm = 0.3 cm
     static constexpr double fAnodeVoltage = 7000.0;               // V - ANODE at +7kV
-    static constexpr double fCathodeVoltage = -7000.0;            // V - CATHODE at -7V
+    static constexpr double fCathodeVoltage = -6000.0;            // V - CATHODE at -7V
     
-    static constexpr double fReadoutVoltage = 0;		// grounded potential for readout.
+    static constexpr double fReadoutVoltage = 60000;		// grounded potential for readout.
 
     // Calculate the dimension and location of geometry.
     double gasGapTop = fGasGapCenterY + fGasGapThickness/2.0;
@@ -218,7 +218,7 @@ int main(int argc, char *argv[]) {
 
   // Set up the gas (C2H2F4/iC4H10/SF6 90/5/5).
   MediumMagboltz gas;
-  gas.LoadGasFile("TIFRH_merged_40000_43000.gas");
+  gas.LoadGasFile("rpc_95.5_4.2_0.3_40-45_ncoll=20.gas");
   gas.SetComposition("C2H2F4", 95.5, "iC4H10", 4.2, "SF6", 0.3);
   gas.SetTemperature(296.15);
   gas.SetPressure(760.0);
@@ -396,6 +396,7 @@ const std::size_t nx = 50,ny =50,ncont =104;
   // For ions
   AvalancheMC avalMCi;
   avalMCi.SetTimeSteps(tstep);
+  avalMCi.SetDistanceSteps(0.001);
   avalMCi.SetSensor(&sensor);
   //avalMCi.SetAvalancheSteps(0.001);
   avalMCi.SetTimeWindow(0.,tMaxWindow);
@@ -412,6 +413,7 @@ const std::size_t nx = 50,ny =50,ncont =104;
   AvalancheMC avalMCin;
   avalMCin.SetTimeSteps(tstep);
   avalMCin.SetSensor(&sensor);
+  avalMCin.SetDistanceSteps(0.001);
   //avalMCin.SetAvalancheSteps(0.001);
   avalMCin.SetTimeWindow(0.,tMaxWindow);
   avalMCin.EnableAvalancheSizeLimit(100000);
@@ -527,7 +529,7 @@ track.NewTrack(0, 0, y0-0.00001, 0, 0, 0,-1);
       statusPrim = 0;
 
       //aval.AvalancheElectron(electron.x, electron.y, electron.z, electron.t,electron.e, 0., 0., 0.);
-      avalMCi.AvalancheElectron(electron.x, electron.y, electron.z, electron.t,true,1);
+      avalMCi.AvalancheElectron(electron.x, electron.y, electron.z, electron.t,false,1);
       //avalMCi.DriftIon(electron.x, electron.y, electron.z, electron.t);
       std::size_t ne = 0, ni = 0;
       avalMCi.GetAvalancheSize(ne, ni);

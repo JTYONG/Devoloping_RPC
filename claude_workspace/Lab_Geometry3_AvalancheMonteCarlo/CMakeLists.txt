@@ -21,7 +21,7 @@ target_link_libraries(AvalMC_addIons Garfield::Garfield OpenMP::OpenMP_CXX)
 file(COPY ${CMAKE_SOURCE_DIR}/AvalMC_addIons.C DESTINATION ${CMAKE_SOURCE_DIR}/result_cache)
 
 # ---Copy all files locally to the build directory-------------------------------
-foreach(_file rpc_95.5_4.2_0.3.gas TIFRH_merged_40000_43000.gas) 
+foreach(_file rpc_95.5_4.2_0.3.gas rpc_95.5_4.2_0.3_40-45_ncoll=20.gas TIFRH_merged_40000_43000.gas) 
   configure_file(${_file} ${_file} COPYONLY)
 endforeach()
 	
