@@ -21,6 +21,8 @@ for ie in range(ef.size()):
     print(f"Grid Point: {ie}")
     e = gas.UnScaleElectricField(ef[ie])
     v = ctypes.c_double(0.)
+    a1 = ctypes.c_double(0.)
+    e1 = ctypes.c_double(0.)
     v1 = ctypes.c_double(0.)
     v2 = ctypes.c_double(0.)
 
@@ -29,14 +31,14 @@ for ie in range(ef.size()):
         print(f"v-value: {v.value}")
         print(f"velocity: {gas.ScaleVelocity(v.value)}")
         V.append(gas.ScaleVelocity(v.value))
-    if gas.GetElectronTownsend(ie,ib,ia,v):
-        print(f"v-value: {v.value}")
-        print(f"townsend: {gas.ScaleTownsend(np.exp(v.value))}")
-        alpha.append(np.exp(v.value))
-    if gas.GetElectronAttachment(ie,ib,ia,v):
-        print(f"v-value: {v.value}")
-        print(f"attachment: {gas.ScaleAttachment(np.exp(v.value))}")
-        eta.append(np.exp(v.value))
+    if gas.GetElectronTownsend(ie,ib,ia,a1):
+        print(f"v-value: {a1.value}")
+        print(f"townsend: {gas.ScaleTownsend(np.exp(a1.value))}")
+        alpha.append(np.exp(a1.value))
+    if gas.GetElectronAttachment(ie,ib,ia,e1):
+        print(f"v-value: {e1.value}")
+        print(f"attachment: {gas.ScaleAttachment(np.exp(e1.value))}")
+        eta.append(np.exp(e1.value))
     if gas.GetElectronAttachment(ie,ib,ia,v1) and gas.GetElectronTownsend(ie,ib,ia,v2):
         print(f"v-value: {v2.value,v1.value}") 
         print(f"effective townsend : {gas.ScaleTownsend(np.exp(v2.value))-gas.ScaleAttachment(np.exp(v1.value))}")
