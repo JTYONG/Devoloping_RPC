@@ -60,7 +60,6 @@ print(len(eff_alpha1))
 
 #ea = gas.UnScaleElectricField(ef[ie])
 
-
 fig,ax = plt.subplots(2,2,figsize=(18,18))
 
 ax[0,0].plot(ef,V1,marker="x",color="blue")
@@ -85,6 +84,6 @@ ax[1,1].set_title("Electroon Effective Townsend Coefficient")
 ax[1,1].set_xlabel("Efield [V/cm]")
 ax[1,1].set_ylabel("$alpha_{eff}$ $[cm^{-1}]$")
 
-fig.savefig("transport coefficients")
+fig.savefig("transport coefficients.png")
 
 
