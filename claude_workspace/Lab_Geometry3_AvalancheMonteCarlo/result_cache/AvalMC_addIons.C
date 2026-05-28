@@ -204,7 +204,7 @@ int main(int argc, char *argv[]) {
     static constexpr double fHoneyCombThickness = 0;     // cm - honey comb layer thickness         0 mm = 0 cm (Remove Honeycomb)
     static constexpr double fMylarThickness = 0.01;         // cm - mylar layer thickness              100 micron = 0.1 mm = 0.01 cm
     static constexpr double fResistiveGlassThickness = 0.3; // cm - resistive glass layer thickness  3 mm = 0.3 cm
-    static constexpr double fAnodeVoltage = 7000.0;               // V - ANODE at +7kV
+    static constexpr double fAnodeVoltage = 6000.0;               // V - ANODE at +7kV
     static constexpr double fCathodeVoltage = -6000.0;            // V - CATHODE at -7V
     
     static constexpr double fReadoutVoltage = 60000;		// grounded potential for readout.
@@ -632,7 +632,6 @@ track.NewTrack(0, 0, y0-0.00001, 0, 0, 0,-1);
   driftView.SetColourNegativeIons(kGreen);
   driftView.Plot3d(true,false,false);
   cD->Update();
-  cD->Write();
   cD->SaveAs("../result_cache/png/DriftPlot3D.png");
   std::size_t nDriftLine = driftView.GetNumberOfDriftLines();
   std::cout<<"Number of DriftLine: "<<nDriftLine<<std::endl;
@@ -645,7 +644,6 @@ track.NewTrack(0, 0, y0-0.00001, 0, 0, 0,-1);
   driftView.SetColourNegativeIons(kGreen);
   driftView.Plot2d(true,false);
   cD2DXY->Update();
-  cD2DXY->Write();
   cD2DXY->SaveAs("../result_cache/png/DriftPlot2DXY.png");
   
   driftView.SetCanvas(cD2DXZ);
@@ -656,7 +654,6 @@ track.NewTrack(0, 0, y0-0.00001, 0, 0, 0,-1);
   driftView.SetColourNegativeIons(kGreen);
   driftView.Plot2d(true,false);
   cD2DXZ->Update();
-  cD2DXZ->Write();
   cD2DXZ->SaveAs("../result_cache/png/DriftPlot2DXZ.png");
 
   if (plotSignal) {
@@ -666,6 +663,9 @@ track.NewTrack(0, 0, y0-0.00001, 0, 0, 0,-1);
     sensor.ExportSignal(label3, "../result_cache/sensor_out/Signal_"+label3);
     sensor.ExportSignal(label4, "../result_cache/sensor_out/Signal_"+label4);
   treefile->cd();  
+  cD->Write();         
+  cD2DXY->Write();
+  cD2DXZ->Write();
   treefile->Write();
   treefile->Close();
   }

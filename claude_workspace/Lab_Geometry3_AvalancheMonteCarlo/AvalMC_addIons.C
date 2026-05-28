@@ -204,7 +204,7 @@ int main(int argc, char *argv[]) {
     static constexpr double fHoneyCombThickness = 0;     // cm - honey comb layer thickness         0 mm = 0 cm (Remove Honeycomb)
     static constexpr double fMylarThickness = 0.01;         // cm - mylar layer thickness              100 micron = 0.1 mm = 0.01 cm
     static constexpr double fResistiveGlassThickness = 0.3; // cm - resistive glass layer thickness  3 mm = 0.3 cm
-    static constexpr double fAnodeVoltage = 7000.0;               // V - ANODE at +7kV
+    static constexpr double fAnodeVoltage = 6000.0;               // V - ANODE at +7kV
     static constexpr double fCathodeVoltage = -6000.0;            // V - CATHODE at -7V
     
     static constexpr double fReadoutVoltage = 60000;		// grounded potential for readout.

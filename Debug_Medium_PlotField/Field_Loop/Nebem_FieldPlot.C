@@ -55,8 +55,11 @@ int main(int argc, char *argv[]) {
   // Creates ROOT Application Environtment
   //
   //
-  for (double volt = 5000; volt<=8000; volt+=100){
   
+  
+
+  for (double volt = 5000; volt<=8000; volt+=100){
+   
 
   TApplication app("app", &argc, argv);
 	
@@ -316,9 +319,67 @@ string ContQ0Name = "../result_cache/png/ContourXZ_quad0_"+std::to_string(volt)+
   treefile->Write();
   treefile->Close();
   
-  
-string VoltGridName = "../result_cache/root_files"+std::to_string(volt)+".png";
-  
+string VoltGridName = "../result_cache/root_files/VoltGrid"+std::to_string(volt)+".root";
+TFile* VoltGrid = new TFile(VoltGridName,"recreate");
+TTree* VoltTree = new TTree("VoltTree","Exact relation of voltage to effective field.")  
+ 
+
+double x, y, z;
+    double Ex, Ey, Ez, Emag;
+
+    VoltTree->Branch("x",    &x,    "x/D");
+    VoltTree->Branch("y",    &y,    "y/D");
+    VoltTree->Branch("z",    &z,    "z/D");
+    VoltTree->Branch("Ex",   &Ex,   "Ex/D");
+    VoltTree->Branch("Ey",   &Ey,   "Ey/D");
+    VoltTree->Branch("Ez",   &Ez,   "Ez/D");
+    VoltTree->Branch("Emag", &Emag, "Emag/D");
+
+    // Sampling ranges
+    const double x_min = -14.0, x_max = 14.0;   // cm
+    const double y_min = -0.95, y_max = 0.95;   // cm
+    const double z_min = -14.0, z_max = 14.0;   // cm
+
+    // Number of sample points per axis
+    const int nx = 57;   // step ~0.5 cm
+    const int ny = 20;   // step ~0.1 cm
+    const int nz = 57;   // step ~0.5 cm
+
+    const double dx = (x_max - x_min) / (nx - 1);
+    const double dy = (y_max - y_min) / (ny - 1);
+    const double dz = (z_max - z_min) / (nz - 1);
+
+    // Variables needed by Garfield ElectricField call
+    double v = 0.0;
+    Garfield::Medium* medium = nullptr;
+    int status = 0;
+
+    for (int i = 0; i < nx; ++i) {
+        x = x_min + i * dx;
+        for (int j = 0; j < ny; ++j) {
+            y = y_min + j * dy;
+            for (int k = 0; k < nz; ++k) {
+                z = z_min + k * dz;
+
+                // Garfield++ field call — adjust to match your component's API
+                comp->ElectricField(x, y, z, Ex, Ey, Ez, v, medium, status);
+
+                // Skip points outside the active region if needed
+                if (status != 0) {
+                    Emag = 0.0;
+                } else {
+                    Emag = std::sqrt(Ex*Ex + Ey*Ey + Ez*Ez);
+                }
+
+                VoltTree->Fill();
+            }
+        }
+    }
+
+    VoltTree->Write();
+    VoltGrid->Close();
+    delete VoltGrid;
+
   
   /*
   ViewField *field2View = nullptr;
