@@ -84,6 +84,7 @@ ax[1,1].set_title("Electroon Effective Townsend Coefficient")
 ax[1,1].set_xlabel(r"Efield [V/cm]")
 ax[1,1].set_ylabel(r"$alpha_{eff}$ $[cm^{-1}]$")
 
+fig.tight_layout()
 fig.savefig("transport coefficients.png")
 
 
