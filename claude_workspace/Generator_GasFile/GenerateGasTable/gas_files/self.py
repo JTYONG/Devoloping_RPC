@@ -62,25 +62,23 @@ print(len(eff_alpha1))
 
 fig,ax = plt.subplots(2,2,figsize=(18,18))
 
-ax[0,0].plot(ef,V1,marker="x",color="blue")
+ax[0,0].scatter(ef,V1,marker="x",color="blue")
 ax[0,0].set_title("Electron Drift Velocity")
 ax[0,0].set_xlabel(r"Efield [V/cm]")
 ax[0,0].set_ylabel(r"$V_D$ [cm/ns]")
 
-
-ax[0,1].plot(ef,alpha1,marker="x",color="blue")
+ax[0,1].scatter(ef,alpha1,marker="x",color="blue")
 ax[0,1].set_title("Electron Townsend Coefficient")
 ax[0,1].set_xlabel(r"Efield [V/cm]")
 ax[0,1].set_ylabel(r"$alpha$ $[cm_{-1}]$")
 
-
-ax[1,0].plot(ef,eta1,marker="x",color="blue")
+ax[1,0].scatter(ef,eta1,marker="x",color="blue")
 ax[1,0].set_title("Electron Attachment Coefficient")
 ax[1,0].set_xlabel(r"Efield [V/cm]")
 ax[1,0].set_ylabel(r"$eta$ $[cm_{-1}]$")
 
-ax[1,1].plot(ef,eff_alpha1,marker="x",color="blue")
-ax[1,1].set_title("Electroon Effective Townsend Coefficient")
+ax[1,1].scatter(ef,eff_alpha1,marker="x",color="blue")
+ax[1,1].set_title("Electron Effective Townsend Coefficient")
 ax[1,1].set_xlabel(r"Efield [V/cm]")
 ax[1,1].set_ylabel(r"$alpha_{eff}$ $[cm^{-1}]$")
 
