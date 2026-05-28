@@ -207,7 +207,7 @@ int main(int argc, char *argv[]) {
     static constexpr double fAnodeVoltage = 6000.0;               // V - ANODE at +7kV
     static constexpr double fCathodeVoltage = -6000.0;            // V - CATHODE at -7V
     
-    static constexpr double fReadoutVoltage = 60000;		// grounded potential for readout.
+    static constexpr double fReadoutVoltage = 0;		// grounded potential for readout.
 
     // Calculate the dimension and location of geometry.
     double gasGapTop = fGasGapCenterY + fGasGapThickness/2.0;

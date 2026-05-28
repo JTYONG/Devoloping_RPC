@@ -57,13 +57,9 @@ int main(int argc, char *argv[]) {
   //
   
   
-
-  for (double volt = 5000; volt<=8000; volt+=100){
-   
-
-  TApplication app("app", &argc, argv);
-	
   std::clock_t start = std::clock();
+  TApplication app("app", &argc, argv);
+  for (double volt = 5000; volt<=8000; volt+=100){
 
   const bool debug = true;
   constexpr bool plotSignal = true;
@@ -79,8 +75,8 @@ int main(int argc, char *argv[]) {
     static constexpr double fHoneyCombThickness = 0;     // cm - honey comb layer thickness         0 mm = 0 cm (Remove Honeycomb)
     static constexpr double fMylarThickness = 0.01;         // cm - mylar layer thickness              100 micron = 0.1 mm = 0.01 cm
     static constexpr double fResistiveGlassThickness = 0.3; // cm - resistive glass layer thickness  3 mm = 0.3 cm
-    static constexpr double fAnodeVoltage = volt;               // V - ANODE at +5 kV
-    static constexpr double fCathodeVoltage = -volt;            // V - CATHODE at -5 kV
+    double fAnodeVoltage = volt;               // V - ANODE at +5 kV
+    double fCathodeVoltage = -volt;            // V - CATHODE at -5 kV
 	
 
     static constexpr double fReadoutVoltage = 0; // Readout Grounded
@@ -205,8 +201,8 @@ ViewGeometry geoView(rpc_geometry);
 geoView.SetCanvas(cGeo);
 geoView.Plot3d();
 cGeo->Update();
-string GeoName = "../result_cache/GeometryPlot"+std::to_string(volt)+".png";
-cGeo->SaveAs(GeoName);
+std::string GeoName = "../result_cache/GeometryPlot"+std::to_string(volt)+".png";
+cGeo->SaveAs(GeoName.c_str());
 
 const std::size_t nx = 50,ny =50,ncont =104;
 const double dTotal = 2*(fGasGapThickness/2.0 + fAnodeCathodeThickness + fResistiveGlassThickness + fMylarThickness + fStripThickness);
@@ -227,8 +223,8 @@ const double dTotal = 2*(fGasGapThickness/2.0 + fAnodeCathodeThickness + fResist
  fieldView->PlotProfile(0,-0.025,0,0,0.025,0,"emag",true);
 */
 
-string TreeFileName = "../result_cache/root_files/PartitionedFieldPlot"+std::to_string(volt)+".root";
-  TFile *treefile = new TFile(TreeFileName,"recreate");
+std::string TreeFileName = "../result_cache/root_files/PartitionedFieldPlot"+std::to_string(volt)+".root";
+  TFile *treefile = new TFile(TreeFileName.c_str(),"recreate");
   TTree *fieldtree = new TTree("FieldTree","Partitioned Field Contour Plot at y=0");
 
   ViewField *contourView = nullptr;
@@ -242,8 +238,8 @@ string TreeFileName = "../result_cache/root_files/PartitionedFieldPlot"+std::to_
   contourView->SetNumberOfContours(ncont);
   contourView->PlotContour("emag");
 
-string ContName = "../result_cache/png/ContourXZ"+std::to_string(volt)+".png";
-  cContour->SaveAs(ContName);
+  std::string ContName = "../result_cache/png/ContourXZ"+std::to_string(volt)+".png";
+  cContour->SaveAs(ContName.c_str());
   cContour->Write();
 
   ViewField *contourView1 = nullptr;
@@ -256,8 +252,8 @@ string ContName = "../result_cache/png/ContourXZ"+std::to_string(volt)+".png";
   contourView1->SetArea(0,-0.1,0,12.,0.1,12.);
   contourView1->SetNumberOfContours(ncont);
   contourView1->PlotContour("emag");
-string ContQ1Name = "../result_cache/png/ContourXZ_quad1_"+std::to_string(volt)+".png";
-  cContour1->SaveAs(ContQ1Name);
+  std::string ContQ1Name = "../result_cache/png/ContourXZ_quad1_"+std::to_string(volt)+".png";
+  cContour1->SaveAs(ContQ1Name.c_str());
   cContour1->Write();
 
   ViewField *contourView2 = nullptr;
@@ -270,8 +266,8 @@ string ContQ1Name = "../result_cache/png/ContourXZ_quad1_"+std::to_string(volt)+
   contourView2->SetArea(-12.,-0.1,0,0,0.1,12.);
   contourView2->SetNumberOfContours(ncont);
   contourView2->PlotContour("emag");
-string ContQ2Name = "../result_cache/png/ContourXZ_quad2_"+std::to_string(volt)+".png";
-  cContour2->SaveAs(ContQ2Name);
+  std::string ContQ2Name = "../result_cache/png/ContourXZ_quad2_"+std::to_string(volt)+".png";
+  cContour2->SaveAs(ContQ2Name.c_str());
   cContour2->Write();
 
   ViewField *contourView3 = nullptr;
@@ -284,8 +280,8 @@ string ContQ2Name = "../result_cache/png/ContourXZ_quad2_"+std::to_string(volt)+
   contourView3->SetArea(-12.,-0.1,-12.,0,0.1,0);
   contourView3->SetNumberOfContours(ncont);
   contourView3->PlotContour("emag");
-string ContQ3Name = "../result_cache/png/ContourXZ_quad3_"+std::to_string(volt)+".png";
-  cContour3->SaveAs(ContQ3Name);
+  std::string ContQ3Name = "../result_cache/png/ContourXZ_quad3_"+std::to_string(volt)+".png";
+  cContour3->SaveAs(ContQ3Name.c_str());
   cContour3->Write();
 
   ViewField *contourView4 = nullptr;
@@ -298,8 +294,8 @@ string ContQ3Name = "../result_cache/png/ContourXZ_quad3_"+std::to_string(volt)+
   contourView4->SetArea(0,-0.1,-12.,12.,0.1,0);
   contourView4->SetNumberOfContours(ncont);
   contourView4->PlotContour("emag");
-string ContQ4Name = "../result_cache/png/ContourXZ_quad4_"+std::to_string(volt)+".png";
-  cContour4->SaveAs(ContQ4Name);
+  std::string ContQ4Name = "../result_cache/png/ContourXZ_quad4_"+std::to_string(volt)+".png";
+  cContour4->SaveAs(ContQ4Name.c_str());
   cContour4->Write();
 
   ViewField *contourView0 = nullptr;
@@ -312,16 +308,16 @@ string ContQ4Name = "../result_cache/png/ContourXZ_quad4_"+std::to_string(volt)+
   contourView0->SetArea(-5,-0.1,-5.,5.,0.1,5.);
   contourView0->SetNumberOfContours(ncont);
   contourView0->PlotContour("emag");
-string ContQ0Name = "../result_cache/png/ContourXZ_quad0_"+std::to_string(volt)+".png";
-  cContour0->SaveAs(ContQ0Name);
+  std::string ContQ0Name = "../result_cache/png/ContourXZ_quad0_"+std::to_string(volt)+".png";
+  cContour0->SaveAs(ContQ0Name.c_str());
   cContour0->Write();
   
   treefile->Write();
   treefile->Close();
   
-string VoltGridName = "../result_cache/root_files/VoltGrid"+std::to_string(volt)+".root";
-TFile* VoltGrid = new TFile(VoltGridName,"recreate");
-TTree* VoltTree = new TTree("VoltTree","Exact relation of voltage to effective field.")  
+  std::string VoltGridName = "../result_cache/root_files/VoltGrid"+std::to_string(volt)+".root";
+TFile* VoltGrid = new TFile(VoltGridName.c_str(),"recreate");
+TTree* VoltTree = new TTree("VoltTree","Exact relation of voltage to effective field."); 
  
 
 double x, y, z;
@@ -341,28 +337,28 @@ double x, y, z;
     const double z_min = -14.0, z_max = 14.0;   // cm
 
     // Number of sample points per axis
-    const int nx = 57;   // step ~0.5 cm
-    const int ny = 20;   // step ~0.1 cm
-    const int nz = 57;   // step ~0.5 cm
+    const int n_x = 57;   // step ~0.5 cm
+    const int n_y = 20;   // step ~0.1 cm
+    const int n_z = 57;   // step ~0.5 cm
 
-    const double dx = (x_max - x_min) / (nx - 1);
-    const double dy = (y_max - y_min) / (ny - 1);
-    const double dz = (z_max - z_min) / (nz - 1);
+    const double dx = (x_max - x_min) / (n_x - 1);
+    const double dy = (y_max - y_min) / (n_y - 1);
+    const double dz = (z_max - z_min) / (n_z - 1);
 
     // Variables needed by Garfield ElectricField call
     double v = 0.0;
     Garfield::Medium* medium = nullptr;
     int status = 0;
 
-    for (int i = 0; i < nx; ++i) {
+    for (int i = 0; i < n_x; ++i) {
         x = x_min + i * dx;
-        for (int j = 0; j < ny; ++j) {
+        for (int j = 0; j < n_y; ++j) {
             y = y_min + j * dy;
-            for (int k = 0; k < nz; ++k) {
+            for (int k = 0; k < n_z; ++k) {
                 z = z_min + k * dz;
 
                 // Garfield++ field call — adjust to match your component's API
-                comp->ElectricField(x, y, z, Ex, Ey, Ez, v, medium, status);
+                rpc->ElectricField(x, y, z, Ex, Ey, Ez, v, medium, status);
 
                 // Skip points outside the active region if needed
                 if (status != 0) {
