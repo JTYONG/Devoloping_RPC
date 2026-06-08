@@ -1,0 +1,38 @@
+# Mobility of C2H2F4+ ions in C2H2F4 (R-134a / Freon)
+# Temperature: T = 293 K (room temperature)
+# Pressure: 760 Torr (1 atm)
+# Accuracy: ~10 %
+# Mobility is nearly field-independent for this heavy molecular ion.
+# Values based on:
+#   - W. Riegler, C. Lippmann, R. Veenhof, NIM A 500 (2003) 144-162
+#   - P. Fonte et al., NIM A 449 (2000) 295-307
+#   - Typical RPC simulation value used in LHC experiments: 1.43-1.50 cm2/(V.s)
+# Electric Field in Td (E/N) (multiply by 250 for V/cm at 293K, 760 Torr)
+# Format: E/N [Td]   Mobility [cm2/(V.s)]
+# ------------------------------------------------------------------
+   10   1.50
+   20   1.50
+   30   1.49
+   40   1.49
+   50   1.49
+   60   1.48
+   70   1.48
+   80   1.48
+  100   1.47
+  120   1.47
+  140   1.46
+  160   1.46
+  180   1.46
+  200   1.45
+  250   1.45
+  300   1.44
+  350   1.44
+  400   1.43
+  500   1.43
+  600   1.42
+  700   1.42
+  800   1.42
+ 1000   1.41
+ 1200   1.41
+ 1500   1.40
+ 2000   1.40
