@@ -1,0 +1,3 @@
+/home/phypc_lab_xmum/jtyong/Github_repo/Devoloping_RPC/FromDrNizam/Model_ParallelPlate+HEED/build/CMakeFiles/ParallelPlate.dir
+/home/phypc_lab_xmum/jtyong/Github_repo/Devoloping_RPC/FromDrNizam/Model_ParallelPlate+HEED/build/CMakeFiles/edit_cache.dir
+/home/phypc_lab_xmum/jtyong/Github_repo/Devoloping_RPC/FromDrNizam/Model_ParallelPlate+HEED/build/CMakeFiles/rebuild_cache.dir
