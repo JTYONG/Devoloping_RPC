@@ -21,7 +21,6 @@
 using namespace Garfield;
 
 int main(int argc, char* argv[]) {
-
   TApplication app("app", &argc, argv);
 
   // ──────────────────────────────────────────────────
@@ -217,7 +216,7 @@ for (double y = gasStart; y <= gasEnd; y += 0.02) {
   LOG("Ions drifted : " << nIonsDrifted);
   LOG("Ions skipped : " << nIonsSkipped);*/
   
- //  ──────────────────────────────────────────────────
+// ─────────────────────────────────────────────────
 // ION DRIFT — all ionisation points from avalanche
 // ──────────────────────────────────────────────────
 int nIonsDrifted = 0;
