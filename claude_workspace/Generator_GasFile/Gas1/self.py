@@ -77,33 +77,33 @@ print(len(eff_alpha1))
 
 fig,ax = plt.subplots(2,2,figsize=(18,18))
 
-ax[0,0].scatter(ef,V1,marker="x",color="blue")
+ax[0,0].scatter(ef,V1,marker=".",color="blue")
 ax[0,0].set_title("Electron Drift Velocity")
 ax[0,0].set_xlabel(r"Efield [V/cm]")
 ax[0,0].set_ylabel(r"$V_D$ [cm/ns]")
 #ax[0,0].legend()
 
-ax[0,1].scatter(ef,alpha1,marker="x",color="blue",label="Townsend")
-ax[0,1].scatter(ef,eta1,marker="x",color="red",label="Attachment")
-ax[0,1].scatter(ef,eff_alpha1,marker="x",color="black",label="Effective Townsend")
+ax[0,1].scatter(ef,alpha1,marker=".",color="blue",label="Townsend")
+ax[0,1].scatter(ef,eta1,marker=".",color="red",label="Attachment")
+ax[0,1].scatter(ef,eff_alpha1,marker=".",color="black",label="Effective Townsend")
 ax[0,1].set_title("Electron Townsend, Attachment and Effective Coefficient")
 ax[0,1].set_xlabel(r"Efield [V/cm]")
 ax[0,1].set_ylabel(r"$alpha$ $[cm_{-1}]$")
 ax[0,1].legend()
 
-ax[1,0].scatter(ef,DL1,marker="x",color="blue")
+ax[1,0].scatter(ef,DL1,marker=".",color="blue")
 ax[1,0].set_title("Electron Longitudinal Difussion")
 ax[1,0].set_xlabel(r"Efield [V/cm]")
 ax[1,0].set_ylabel(r"$D_L$ $[\sqrt{cm}]$")
 #ax[1,0].legend()
 
-ax[1,1].scatter(ef,DT1,marker="x",color="blue")
+ax[1,1].scatter(ef,DT1,marker=".",color="blue")
 ax[1,1].set_title("Electron Transverse DIfussion")
 ax[1,1].set_xlabel(r"Efield [V/cm]")
 ax[1,1].set_ylabel(r"%$D_T$ $[\sqrt{cm}]$")
 #ax[1,1].legend()
 
 fig.tight_layout()
-fig.savefig("38-39 kV transport coefficients.png")
+fig.savefig("30-100 kV transport coefficients.png")
 
 
