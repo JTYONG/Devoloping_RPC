@@ -1,0 +1,3 @@
+/home/mnizam/G4WORK/EX_GARFIELD/RPC6_eionsingle/build/CMakeFiles/Weight.dir
+/home/mnizam/G4WORK/EX_GARFIELD/RPC6_eionsingle/build/CMakeFiles/edit_cache.dir
+/home/mnizam/G4WORK/EX_GARFIELD/RPC6_eionsingle/build/CMakeFiles/rebuild_cache.dir

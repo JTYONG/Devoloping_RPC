@@ -1,0 +1,3 @@
+/home/mnizam/G4WORK/EX_GARFIELD/RPC3/Magboltz/build/CMakeFiles/make_gas.dir
+/home/mnizam/G4WORK/EX_GARFIELD/RPC3/Magboltz/build/CMakeFiles/edit_cache.dir
+/home/mnizam/G4WORK/EX_GARFIELD/RPC3/Magboltz/build/CMakeFiles/rebuild_cache.dir
