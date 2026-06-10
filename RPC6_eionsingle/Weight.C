@@ -77,9 +77,9 @@ for (double y = gasStart; y <= gasEnd; y += 0.02) {
   // 2. GAS
   // ──────────────────────────────────────────────────
   MediumMagboltz gas;
-  gas.LoadGasFile("../c2h2f4_95-5_ic4h10_4-2_sf6_0-3.gas");
+  gas.LoadGasFile("c2h2f4_95-5_ic4h10_4-2_sf6_0-3.gas");
 
-  gas.LoadIonMobility("../IonMobility_C8Hn+_iC4H10.txt");
+  gas.LoadIonMobility("IonMobility_C8Hn+_iC4H10.txt");
   gas.Initialise(true);
   rpc.SetMedium(&gas);   // called once only
 
