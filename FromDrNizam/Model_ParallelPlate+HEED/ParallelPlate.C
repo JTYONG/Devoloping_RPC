@@ -243,8 +243,13 @@ for (double y = gasStart; y <= gasEnd; y += 0.02) {
     				nIonsSkipped++;
     				continue;
   			}
-		LOG("\rIon Location : (" << birth.x <<","<< birth.y <<","<< birth.z <<")");
-  		ionDrift.DriftIon(birth.x, birth.y, birth.z, birth.t);
+                  std::cout << "\rIon Location : ("
+                        << birth.x << ","
+                        << birth.y << ","
+                        << birth.z << ")"
+                        << std::flush;  // flush without newline
+			
+		ionDrift.DriftIon(birth.x, birth.y, birth.z, birth.t);
   		nIonsDrifted++;
 		}
 
@@ -359,25 +364,26 @@ LOG("Total # of Electrons  : " << nElectrons);
   // ──────────────────────────────────────────────────
   // 11. PLOT
   // ──────────────────────────────────────────────────
-  sensor.ExportSignal(electrode, "ElectronIonCurrent",true);
+  std::string dir = "../result_cache";
+  int num = 1;
 
+  sensor.ExportSignal(electrode, (dir + "/r" + std::to_string(num) + "_ElectronIonCurrent").c_str(),true);
   TCanvas* c1 = new TCanvas("c1", "Electron + Ion Signal", 900, 700);
   ViewSignal sigView(&sensor);
   sigView.SetCanvas(c1);
   sigView.PlotSignal(electrode);
-  c1->SaveAs("rpc_electron_ion_signal.png");
+  //c1->SaveAs("rpc_electron_ion_signal.png");
   c1->Update();
   gSystem->ProcessEvents();
 
   //  Integrate AFTER exporting current
   sensor.IntegrateSignal(electrode);
-  sensor.ExportSignal(electrode, "ElectronIonCharge",true);
-
+  sensor.ExportSignal(electrode, (dir + "/r" + std::to_string(num) + "_ElectronIonCharge").c_str(),true);
   TCanvas* c2 = new TCanvas("c2", "Induced Charge", 900, 700);
   ViewSignal chargeView(&sensor);
   chargeView.SetCanvas(c2);
   chargeView.PlotSignal(electrode);
-  c2->SaveAs("rpc_electron_ion_charge.png");
+  //c2->SaveAs("rpc_electron_ion_charge.png");
   c2->Update();
   gSystem->ProcessEvents();
 
