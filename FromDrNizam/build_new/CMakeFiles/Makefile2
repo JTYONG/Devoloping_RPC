@@ -54,10 +54,10 @@ RM = /home/sus/miniforge3/envs/physics/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/New
+CMAKE_SOURCE_DIR = /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/New/build_new
+CMAKE_BINARY_DIR = /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_new
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -85,14 +85,14 @@ clean: CMakeFiles/Weight.dir/clean
 CMakeFiles/Weight.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weight.dir/build.make CMakeFiles/Weight.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weight.dir/build.make CMakeFiles/Weight.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/New/build_new/CMakeFiles --progress-num=1,2 "Built target Weight"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_new/CMakeFiles --progress-num=1,2 "Built target Weight"
 .PHONY : CMakeFiles/Weight.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Weight.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/New/build_new/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_new/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Weight.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/New/build_new/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_new/CMakeFiles 0
 .PHONY : CMakeFiles/Weight.dir/rule
 
 # Convenience name for target.
@@ -102,7 +102,7 @@ Weight: CMakeFiles/Weight.dir/rule
 # codegen rule for target.
 CMakeFiles/Weight.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weight.dir/build.make CMakeFiles/Weight.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/New/build_new/CMakeFiles --progress-num=1,2 "Finished codegen for target Weight"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_new/CMakeFiles --progress-num=1,2 "Finished codegen for target Weight"
 .PHONY : CMakeFiles/Weight.dir/codegen
 
 # clean rule for target.

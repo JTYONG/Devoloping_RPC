@@ -166,14 +166,14 @@ for (double y = gasStart; y <= gasEnd; y += 0.02) {
   AvalancheMicroscopic aval(&sensor);
   aval.EnableSignalCalculation();
   aval.UseWeightingPotential();
-
+  aval.EnableMultithreading(16,true);
   // ──────────────────────────────────────────────────
   // 7. ION DRIFT (MC)
   // ──────────────────────────────────────────────────
   AvalancheMC ionDrift(&sensor);
   ionDrift.EnableSignalCalculation();
   ionDrift.SetDistanceSteps(1.e-3);   // 20 µm steps
-
+  ionDrift.EnableMultithreading(true);
   // ──────────────────────────────────────────────────
   // 8. INJECT SINGLE ELECTRON
   // ──────────────────────────────────────────────────

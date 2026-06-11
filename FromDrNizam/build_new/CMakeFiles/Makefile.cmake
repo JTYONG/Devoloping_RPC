@@ -7,12 +7,12 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/New/CMakeLists.txt"
-  "/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/New/TimingRPCGas.gas"
+  "/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/CMakeLists.txt"
+  "/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/TimingRPCGas.gas"
   "CMakeFiles/4.3.2/CMakeCCompiler.cmake"
   "CMakeFiles/4.3.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.3.2/CMakeSystem.cmake"
-  "/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/New/c2h2f4_95-5_ic4h10_4-2_sf6_0-3.gas"
+  "/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/c2h2f4_95-5_ic4h10_4-2_sf6_0-3.gas"
   "/home/sus/miniforge3/envs/physics/cmake/ROOTConfig-targets-release.cmake"
   "/home/sus/miniforge3/envs/physics/cmake/ROOTConfig-targets.cmake"
   "/home/sus/miniforge3/envs/physics/cmake/ROOTConfig-version.cmake"

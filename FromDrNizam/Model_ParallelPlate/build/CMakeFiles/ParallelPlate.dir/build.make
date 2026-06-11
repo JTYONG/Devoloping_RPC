@@ -53,10 +53,10 @@ RM = /home/sus/miniforge3/envs/physics/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate
+CMAKE_SOURCE_DIR = /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate/build
+CMAKE_BINARY_DIR = /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ParallelPlate.dir/depend.make
@@ -73,18 +73,18 @@ CMakeFiles/ParallelPlate.dir/codegen:
 .PHONY : CMakeFiles/ParallelPlate.dir/codegen
 
 CMakeFiles/ParallelPlate.dir/ParallelPlate.C.o: CMakeFiles/ParallelPlate.dir/flags.make
-CMakeFiles/ParallelPlate.dir/ParallelPlate.C.o: /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate/ParallelPlate.C
+CMakeFiles/ParallelPlate.dir/ParallelPlate.C.o: /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate/ParallelPlate.C
 CMakeFiles/ParallelPlate.dir/ParallelPlate.C.o: CMakeFiles/ParallelPlate.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ParallelPlate.dir/ParallelPlate.C.o"
-	/home/sus/miniforge3/envs/physics/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ParallelPlate.dir/ParallelPlate.C.o -MF CMakeFiles/ParallelPlate.dir/ParallelPlate.C.o.d -o CMakeFiles/ParallelPlate.dir/ParallelPlate.C.o -c /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate/ParallelPlate.C
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ParallelPlate.dir/ParallelPlate.C.o"
+	/home/sus/miniforge3/envs/physics/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ParallelPlate.dir/ParallelPlate.C.o -MF CMakeFiles/ParallelPlate.dir/ParallelPlate.C.o.d -o CMakeFiles/ParallelPlate.dir/ParallelPlate.C.o -c /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate/ParallelPlate.C
 
 CMakeFiles/ParallelPlate.dir/ParallelPlate.C.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ParallelPlate.dir/ParallelPlate.C.i"
-	/home/sus/miniforge3/envs/physics/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate/ParallelPlate.C > CMakeFiles/ParallelPlate.dir/ParallelPlate.C.i
+	/home/sus/miniforge3/envs/physics/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate/ParallelPlate.C > CMakeFiles/ParallelPlate.dir/ParallelPlate.C.i
 
 CMakeFiles/ParallelPlate.dir/ParallelPlate.C.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ParallelPlate.dir/ParallelPlate.C.s"
-	/home/sus/miniforge3/envs/physics/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate/ParallelPlate.C -o CMakeFiles/ParallelPlate.dir/ParallelPlate.C.s
+	/home/sus/miniforge3/envs/physics/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate/ParallelPlate.C -o CMakeFiles/ParallelPlate.dir/ParallelPlate.C.s
 
 # Object files for target ParallelPlate
 ParallelPlate_OBJECTS = \
@@ -121,7 +121,7 @@ ParallelPlate: /home/sus/miniforge3/envs/physics/lib/libDegrade.so.3.17
 ParallelPlate: /home/sus/miniforge3/envs/physics/lib/libgomp.so
 ParallelPlate: /home/sus/miniforge3/envs/physics/x86_64-conda-linux-gnu/sysroot/usr/lib/libpthread.so
 ParallelPlate: CMakeFiles/ParallelPlate.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ParallelPlate"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ParallelPlate"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ParallelPlate.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -133,6 +133,6 @@ CMakeFiles/ParallelPlate.dir/clean:
 .PHONY : CMakeFiles/ParallelPlate.dir/clean
 
 CMakeFiles/ParallelPlate.dir/depend:
-	cd /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate/build /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate/build /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate/build/CMakeFiles/ParallelPlate.dir/DependInfo.cmake "--color=$(COLOR)" ParallelPlate
+	cd /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate/build /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate/build /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate/build/CMakeFiles/ParallelPlate.dir/DependInfo.cmake "--color=$(COLOR)" ParallelPlate
 .PHONY : CMakeFiles/ParallelPlate.dir/depend
 

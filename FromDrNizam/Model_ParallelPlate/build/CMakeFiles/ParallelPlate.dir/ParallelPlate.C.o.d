@@ -1,5 +1,5 @@
 CMakeFiles/ParallelPlate.dir/ParallelPlate.C.o: \
- /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate/ParallelPlate.C \
+ /home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate/ParallelPlate.C \
  /home/sus/miniforge3/envs/physics/x86_64-conda-linux-gnu/sysroot/usr/include/stdc-predef.h \
  /home/sus/miniforge3/envs/physics/include/TApplication.h \
  /home/sus/miniforge3/envs/physics/include/TObject.h \

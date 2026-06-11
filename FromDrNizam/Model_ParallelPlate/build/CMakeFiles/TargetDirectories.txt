@@ -1,3 +1,3 @@
-/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate/build/CMakeFiles/ParallelPlate.dir
-/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate/build/CMakeFiles/edit_cache.dir
-/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/build_ParallelPlate/build/CMakeFiles/rebuild_cache.dir
+/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate/build/CMakeFiles/ParallelPlate.dir
+/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate/build/CMakeFiles/edit_cache.dir
+/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate/build/CMakeFiles/rebuild_cache.dir
