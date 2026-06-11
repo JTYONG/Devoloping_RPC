@@ -320,7 +320,7 @@ LOG("Min signal            : " << minSignal << " fC/ns");
   // ──────────────────────────────────────────────────
   // 11. PLOT
   // ──────────────────────────────────────────────────
-  sensor.ExportSignal(electrode, "ElectronIonCurrent");
+  sensor.ExportSignal(electrode, "ElectronIonCurrent",true);
 
   TCanvas* c1 = new TCanvas("c1", "Electron + Ion Signal", 900, 700);
   ViewSignal sigView(&sensor);
@@ -332,7 +332,7 @@ LOG("Min signal            : " << minSignal << " fC/ns");
 
   //  Integrate AFTER exporting current
   sensor.IntegrateSignal(electrode);
-  sensor.ExportSignal(electrode, "ElectronIonCharge");
+  sensor.ExportSignal(electrode, "ElectronIonCharge",true);
 
   TCanvas* c2 = new TCanvas("c2", "Induced Charge", 900, 700);
   ViewSignal chargeView(&sensor);

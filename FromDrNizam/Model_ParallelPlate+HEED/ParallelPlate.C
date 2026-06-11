@@ -185,7 +185,7 @@ for (double y = gasStart; y <= gasEnd; y += 0.02) {
   ionDrift.EnableSignalCalculation();
   ionDrift.SetDistanceSteps(1.e-3);   // 20 µm steps
   ionDrift.EnableMultithreading(14);
-  ionDrift.EnableDebugging(true);
+  ionDrift.EnableDebugging(false);
 
   // ──────────────────────────────────────────────────
   // 8. INJECT SINGLE ELECTRON
@@ -205,6 +205,7 @@ for (double y = gasStart; y <= gasEnd; y += 0.02) {
   
   track.NewTrack(0, y0, 0, 0, 0, -1, 0);
   int nCluster = 0; 
+  int nElectrons = 0;
   int SizeCluster = track.GetClusters().size();
   for (const auto &cluster : track.GetClusters()){
 	  ++nCluster;
@@ -216,6 +217,7 @@ for (double y = gasStart; y <= gasEnd; y += 0.02) {
  		aval.AvalancheElectron(electron.x, electron.y, electron.z, electron.t,electron.e, 0., 0., 0.);		 
   		int ne = 0, ni = 0;
   		aval.GetAvalancheSize(ne, ni);
+		nElectrons += ne;
   		LOG("\nAvalanche: electrons=" << ne << "  ions=" << ni);
 		//  ──────────────────────────────────────────────────
 		// ION DRIFT — all ionisation points from avalanche
@@ -349,11 +351,11 @@ LOG("Min signal            : " << minSignal << " fC/ns");
 
 LOG("===ClUSTER DIAGNOSIS ===");
 LOG("Total # of Cluster    : " << SizeCluster);
-
+LOF("Total # of Electrons  : " << nElectrons)
   // ──────────────────────────────────────────────────
   // 11. PLOT
   // ──────────────────────────────────────────────────
-  sensor.ExportSignal(electrode, "ElectronIonCurrent");
+  sensor.ExportSignal(electrode, "ElectronIonCurrent",true);
 
   TCanvas* c1 = new TCanvas("c1", "Electron + Ion Signal", 900, 700);
   ViewSignal sigView(&sensor);
@@ -365,7 +367,7 @@ LOG("Total # of Cluster    : " << SizeCluster);
 
   //  Integrate AFTER exporting current
   sensor.IntegrateSignal(electrode);
-  sensor.ExportSignal(electrode, "ElectronIonCharge");
+  sensor.ExportSignal(electrode, "ElectronIonCharge",true);
 
   TCanvas* c2 = new TCanvas("c2", "Induced Charge", 900, 700);
   ViewSignal chargeView(&sensor);

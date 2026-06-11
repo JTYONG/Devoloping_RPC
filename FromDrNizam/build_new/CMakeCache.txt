@@ -531,9 +531,9 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding OpenMP
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][TRUE][ ][v4.5()]
 //Details about finding OpenMP_C
-FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C:INTERNAL=[-fopenmp][/home/sus/miniforge3/envs/physics/lib/libgomp.so][/home/sus/miniforge3/envs/physics/x86_64-conda-linux-gnu/sysroot/usr/lib/libpthread.so][v4.5()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C:INTERNAL=[-fopenmp][/home/sus/miniforge3/envs/physics/lib/libgomp.so][/home/sus/miniforge3/envs/physics/x86_64-conda-linux-gnu/sysroot/usr/lib/libpthread.so][/home/sus/miniforge3/envs/physics/lib/libgomp.so][/home/sus/miniforge3/envs/physics/x86_64-conda-linux-gnu/sysroot/usr/lib/libpthread.so][v4.5()]
 //Details about finding OpenMP_CXX
-FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-fopenmp][/home/sus/miniforge3/envs/physics/lib/libgomp.so][/home/sus/miniforge3/envs/physics/x86_64-conda-linux-gnu/sysroot/usr/lib/libpthread.so][v4.5()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-fopenmp][/home/sus/miniforge3/envs/physics/lib/libgomp.so][/home/sus/miniforge3/envs/physics/x86_64-conda-linux-gnu/sysroot/usr/lib/libpthread.so][/home/sus/miniforge3/envs/physics/lib/libgomp.so][/home/sus/miniforge3/envs/physics/x86_64-conda-linux-gnu/sysroot/usr/lib/libpthread.so][v4.5()]
 //Details about finding Vdt
 FIND_PACKAGE_MESSAGE_DETAILS_Vdt:INTERNAL=[/home/sus/miniforge3/envs/physics/include][/home/sus/miniforge3/envs/physics/lib/libvdt.so][v0.4()]
 //Result of TRY_COMPILE
