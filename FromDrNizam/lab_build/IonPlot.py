@@ -52,7 +52,7 @@ g_electron.GetXaxis().SetRangeUser(time[0], 70.0)
 '''
 g_ion.SetTitle("Induced Ion Current;Time [ns];Current [fC/ns]")
 g_ion.Draw("APL")
-g_ion.GetXaxis().SetRangeUser(time[0], 100.0)
+g_ion.GetXaxis().SetRangeUser(time[0], 5000.0)
 #g_ion.Draw("PL SAME")
 #g_total.Draw("L SAME")
 
