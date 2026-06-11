@@ -1,0 +1,3 @@
+/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate+HEED/build/CMakeFiles/ParallelPlate.dir
+/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate+HEED/build/CMakeFiles/edit_cache.dir
+/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate+HEED/build/CMakeFiles/rebuild_cache.dir
