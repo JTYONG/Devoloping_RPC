@@ -195,6 +195,7 @@ for (double y = gasStart; y <= gasEnd; y += 0.02) {
   const double y0 = gasEnd - margin;   // 1.5mm inside cathode
   LOG("\nInjecting electron at y=" << y0
       << "  (cathode=" << gasEnd
+      << "  y0 =:" << y0
       << "  anode="    << gasStart << ")");
 
 
@@ -213,12 +214,15 @@ for (double y = gasStart; y <= gasEnd; y += 0.02) {
 	  int nClust_Elec = 0;
  	 for (const auto &electron : cluster.electrons){
 		++nClust_Elec;
-		LOG("Electron :"<<nClust_Elec<<"/"<<cluster.electrons.size());
+		LOG("Primary Electron :"<<nClust_Elec<<"/"<<cluster.electrons.size());
+		LOG("Primary Electron located at : (" << electron.x << "," << electron.y << "," << electron.z << ")");
+		LOG("Primary Electron generation time at : " << electron.t << "[ns], Initial Energy : " << electron.e << "[eV]");
  		aval.AvalancheElectron(electron.x, electron.y, electron.z, electron.t,electron.e, 0., 0., 0.);		 
   		int ne = 0, ni = 0;
   		aval.GetAvalancheSize(ne, ni);
 		nElectrons += ne;
   		LOG("\nAvalanche: electrons=" << ne << "  ions=" << ni);
+		LOG("Accumulated electrons =" << nElectrons);
 		//  ──────────────────────────────────────────────────
 		// ION DRIFT — all ionisation points from avalanche
 		// ──────────────────────────────────────────────────
@@ -239,7 +243,7 @@ for (double y = gasStart; y <= gasEnd; y += 0.02) {
     				nIonsSkipped++;
     				continue;
   			}
-
+		LOG("\rIon Location : (" << birth.x <<","<< birth.y <<","<< birth.z <<")");
   		ionDrift.DriftIon(birth.x, birth.y, birth.z, birth.t);
   		nIonsDrifted++;
 		}
@@ -351,7 +355,7 @@ LOG("Min signal            : " << minSignal << " fC/ns");
 
 LOG("===ClUSTER DIAGNOSIS ===");
 LOG("Total # of Cluster    : " << SizeCluster);
-LOF("Total # of Electrons  : " << nElectrons)
+LOG("Total # of Electrons  : " << nElectrons);
   // ──────────────────────────────────────────────────
   // 11. PLOT
   // ──────────────────────────────────────────────────
