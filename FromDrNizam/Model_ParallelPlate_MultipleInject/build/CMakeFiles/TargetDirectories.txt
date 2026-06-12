@@ -1,0 +1,4 @@
+/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate_MultipleInject/build/CMakeFiles/ParallelPlate.dir
+/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate_MultipleInject/build/CMakeFiles/Weight.dir
+/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate_MultipleInject/build/CMakeFiles/edit_cache.dir
+/home/sus/Github_Repo_JTYong/Undergraduate_XMUM/FYP/Devoloping_RPC/FromDrNizam/Model_ParallelPlate_MultipleInject/build/CMakeFiles/rebuild_cache.dir
