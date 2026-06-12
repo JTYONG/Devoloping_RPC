@@ -6,7 +6,7 @@ i_electron = []
 #i_ion      = []
 #i_total    = []
 
-with open("r1_ElectronIonCurrent.csv") as f:
+with open("r2_ElectronIonCurrent.csv") as f:
     reader = csv.reader(f)
     next(reader)  # skip header line
     next(reader)  # skip "The induced signal." line

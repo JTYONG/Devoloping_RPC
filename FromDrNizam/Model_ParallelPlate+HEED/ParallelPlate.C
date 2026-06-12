@@ -365,7 +365,7 @@ LOG("Total # of Electrons  : " << nElectrons);
   // 11. PLOT
   // ──────────────────────────────────────────────────
   std::string dir = "../result_cache";
-  int num = 1;
+  int num = 2;
 
   sensor.ExportSignal(electrode, (dir + "/r" + std::to_string(num) + "_ElectronIonCurrent").c_str(),true);
   TCanvas* c1 = new TCanvas("c1", "Electron + Ion Signal", 900, 700);
