@@ -25,8 +25,7 @@
 
 using namespace Garfield;
 
-int main(int argc, char* argv[]) {
-
+int main(int argc, char* argv[]) {	
   TApplication app("app", &argc, argv);
 
   // ──────────────────────────────────────────────────
@@ -202,6 +201,11 @@ for (double y = gasStart; y <= gasEnd; y += 0.02) {
   track.SetParticle("Pion");
   track.SetMomentum(7.e9);
   track.CrossInactiveMedia(true);
+  track.NewTrack(0, y0, 0, 0, 0, -1, 0);
+
+  int nCluster = 0;
+  int nElectrons = 0;
+  int SizeCluster = track.GetClusters().size();
   
   track.NewTrack(0, y0, 0, 0, 0, -1, 0);
   int nCluster = 0; 
@@ -211,12 +215,15 @@ for (double y = gasStart; y <= gasEnd; y += 0.02) {
 	  LOG("Cluster: "<<nCluster<<"/"<<SizeCluster);
 	  int nClust_Elec = 0;
  	 for (const auto &electron : cluster.electrons){
-		++nClust_Elec;
-		LOG("Electron :"<<nClust_Elec<<"/"<<cluster.electrons.size());
- 		aval.AvalancheElectron(electron.x, electron.y, electron.z, electron.t,electron.e, 0., 0., 0.);		 
+ 		++nClust_Elec;
+                LOG("Primary Electron :"<<nClust_Elec<<"/"<<cluster.electrons.size());
+                LOG("Primary Electron located at : (" << electron.x << "," << electron.y << "," << electron.z << ")");
+                LOG("Primary Electron generation time at : " << electron.t << "[ns], Initial Energy : " << electron.e << "[eV]");
+		aval.AvalancheElectron(electron.x, electron.y, electron.z, electron.t,electron.e, 0., 0., 0.);		 
   		int ne = 0, ni = 0;
   		aval.GetAvalancheSize(ne, ni);
   		LOG("\nAvalanche: electrons=" << ne << "  ions=" << ni);
+		LOG("Accumulated electrons =" << nElectrons);
 		//  ──────────────────────────────────────────────────
 		// ION DRIFT — all ionisation points from avalanche
 		// ──────────────────────────────────────────────────
@@ -237,12 +244,15 @@ for (double y = gasStart; y <= gasEnd; y += 0.02) {
     				nIonsSkipped++;
     				continue;
   			}
-
+                LOG("\rIon Location : (" << birth.x <<","<< birth.y <<","<< birth.z <<")");
   		ionDrift.DriftIon(birth.x, birth.y, birth.z, birth.t);
   		nIonsDrifted++;
 		}
-
-		LOG("Ions drifted : " << nIonsDrifted);
+		std::cout << "\rIon Location : ("
+          		<< birth.x << ","
+          		<< birth.y << ","
+          		<< birth.z << ")"
+          		<< std::flush;  // flush without newline
 		LOG("Ions skipped : " << nIonsSkipped);
 	
 		// Print ion birth position histogram
@@ -353,7 +363,10 @@ LOG("Total # of Cluster    : " << SizeCluster);
   // ──────────────────────────────────────────────────
   // 11. PLOT
   // ──────────────────────────────────────────────────
-  sensor.ExportSignal(electrode, "ElectronIonCurrent");
+  std::string dir = "../result_cache";
+  int num = 1;
+
+  sensor.ExportSignal(electrode, (dir + "/r" + std::to_string(num) + "_ElectronIonCurrentSignal").c_str(),true);
 
   TCanvas* c1 = new TCanvas("c1", "Electron + Ion Signal", 900, 700);
   ViewSignal sigView(&sensor);
@@ -364,8 +377,9 @@ LOG("Total # of Cluster    : " << SizeCluster);
   gSystem->ProcessEvents();
 
   //  Integrate AFTER exporting current
+  
   sensor.IntegrateSignal(electrode);
-  sensor.ExportSignal(electrode, "ElectronIonCharge");
+  sensor.ExportSignal(electrode, (dir + "/r" + std::to_string(num) + "_ElectronIonChargeSignal").c_str(),true);
 
   TCanvas* c2 = new TCanvas("c2", "Induced Charge", 900, 700);
   ViewSignal chargeView(&sensor);
