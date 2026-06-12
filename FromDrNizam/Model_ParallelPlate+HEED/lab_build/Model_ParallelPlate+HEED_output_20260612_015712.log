@@ -1916,3 +1916,7 @@ Sensor::ExportSignal: File '../result_cache/r1_ElectronIonCharge.csv' exported.
 ==========================================
 
 Done.
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
